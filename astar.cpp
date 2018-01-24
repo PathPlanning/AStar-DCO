@@ -8,28 +8,26 @@ Astar::Astar(double HW, bool BT)
 
 double Astar::computeHFromCellToCell(int i1, int j1, int i2, int j2, const EnvironmentOptions &options, const Map &map)
 {
-    int dx, dy, d1 = map.getCellSize();
-    double d2;
-    dx = abs(i1 - i2);
-    dy = abs(j1 - j2);
+    int dx, dy;
+    double d2 = 1.41421356237;
+    dx = abs(i2 - i1);
+    dy = abs(j2 - j1);
 
     switch (options.metrictype)
     {
         case 0: //Диагональ
-            d2 = sqrt(d1 * d1 + d1 * d1);
-            return d1 * (dx + dy) + (d2 - 2 * d1) * std::min(dx, dy);
+            return  (dx + dy) + (d2 - 2) * std::min(dx, dy);
 
-        case 1: //Манхеттен 
-            return d1 * (dx + dy);
+        case 1: //Манхеттен
+            return dx + dy;
 
         case 2://Евклидово расстояние
-            return d1 * sqrt(dx * dx + dy * dy);
+            return sqrt(dx * dx + dy * dy);
 
         case 3://Расстояние Чебышёва
+            return (dx + dy) + (1 - 2) * std::min(dx, dy);
 
-            return d1 * (dx + dy) + (d1 - 2 * d1) * std::min(dx, dy);
         default:
-
             return 0;
 
     }
@@ -56,14 +54,16 @@ bool Astar::Acmp(const Node& lhs, const Node& rhs)
 SearchResult Astar::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options)
 {
 
+
     goal = map.getFinishNode();
     start = map.getStartNode();
     int tmpx = -1, tmpy = -1;
-    double sum = 0;
+    std::vector<Node>::iterator currit,  tmpit;
+    int pos = 0;
+    double sum = 0, cost = 0;
     unsigned int step = 0;
     Node succ;
     Node *curr;
-    std::vector<Node>::iterator currit;
     std::list<Node> succs;
 
     auto startpnt = std::chrono::high_resolution_clock::now();
@@ -82,15 +82,25 @@ SearchResult Astar::startSearch(ILogger *Logger, const Map &map, const Environme
         Open.erase(currit);
 
         step++;
-        succs = findSuccessors(Close.back(), map, options);
+        succs = findSuccessors(curr, map, options);
         int n = succs.size();
         for(int i = 0; i < n; i++)
         {
             succ = succs.front();
             succs.pop_front();
-            double cost = map.getCellSize() * Cost(*curr, succ);
+            if ((pos = isOpened(succ.i, succ.j)) != -1)
+            {
+                tmpit = Open.begin() + pos;
+                succ = *tmpit;
+            }
+
+            cost = Cost(*curr, succ);
             if(succ.g > curr->g + cost)
             {
+                if(pos != -1)
+                {
+                    Open.erase(tmpit);
+                }
                 succ.g = curr->g + cost;
                 succ.H = computeHFromCellToCell(succ.i, succ.j, goal.i, goal.j, options, map);
                 succ.F = succ.g + hweight * succ.H;
@@ -125,16 +135,15 @@ SearchResult Astar::startSearch(ILogger *Logger, const Map &map, const Environme
             if(curr->parent != NULL)
             {
                 sum += Cost(*curr, *(curr->parent));
-
             }
             curr = curr->parent;
 
         }
         auto endpnt = std::chrono::high_resolution_clock::now();
-        auto res  = std::chrono::duration_cast<std::chrono::microseconds>(endpnt - startpnt).count();
+        auto res  = std::chrono::duration_cast<std::chrono::seconds>(endpnt - startpnt).count();
         sresult.lppath = &lppath;
         sresult.hppath = &hppath;
-        sresult.pathlength = sum * map.getCellSize();
+        sresult.pathlength = sum;
         sresult.numberofsteps = step;
         sresult.time = res;
         sresult.nodescreated = (unsigned int)(Open.size() + Close.size());

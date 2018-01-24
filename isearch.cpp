@@ -19,23 +19,31 @@ ISearch::~ISearch(void)
 }*/
 
 
-bool ISearch::isOpened(int i, int j)
+int ISearch::isOpened(int i, int j)
 {
 
-    bool result = false;
-    for (int c = 0; c < Open.size() && !result; c++)
+    int result = -1;
+
+    for (int c = 0; c < Open.size() && result == -1; c++)
     {
-        result = (Open[c].i == i) && (Open[c].j == j);
+        if ((Open[c].i == i) && (Open[c].j == j))
+        {
+            result = c;
+        }
     }
     return result;
 }
 
-bool ISearch::isClosed(int i, int j)
+int ISearch::isClosed(int i, int j)
 {
-    bool result = false;
-    for (int c = 0; c < Close.size() && !result; c++)
+    int result = -1;
+
+    for (int c = 0; c < Close.size() && result == -1; c++)
     {
-        result = (Close[c]->i == i) && (Close[c]->j == j);
+        if ((Close[c]->i == i) && (Close[c]->j == j))
+        {
+            result = c;
+        }
     }
     return result;
 }
@@ -62,7 +70,7 @@ double ISearch::Cost(Node fst, Node scn)
     }
     else
     {
-        return sqrt(2);
+        return 1.41421356237;
     }
 }
 
@@ -71,58 +79,46 @@ std::list<Node> ISearch::findSuccessors(Node *curNode, const Map &map, const Env
     std::list<Node> successors;
 
     Node tmp;
+    std::vector<Node>::iterator tmpit;
     tmp.g = DBL_MAX;
     tmp.H = 0;
     tmp.F = DBL_MAX;
     tmp.parent = NULL;
     int y = curNode->i;
     int x = curNode->j;
-    if (map.CellOnGrid(y + 1, x) && !map.CellIsObstacle(y + 1, x) && !isClosed(y + 1, x))
+    if (map.CellOnGrid(y + 1, x) && !map.CellIsObstacle(y + 1, x) && isClosed(y + 1, x) == -1)
     {
         tmp.i = y + 1;
         tmp.j = x;
+        successors.push_back(tmp);
 
-        if (!isOpened(tmp.i, tmp.j))
-        {
-            successors.push_back(tmp);
-        }
     }
-    if (map.CellOnGrid(y, x + 1) && !map.CellIsObstacle(y , x + 1) && !isClosed(y, x + 1))
+    if (map.CellOnGrid(y, x + 1) && !map.CellIsObstacle(y , x + 1) && isClosed(y, x + 1) == -1)
     {
 
         tmp.i = y;
         tmp.j = x + 1;
+        successors.push_back(tmp);
 
-        if (!isOpened(tmp.i, tmp.j))
-        {
-            successors.push_back(tmp);
-        }
     }
-    if (map.CellOnGrid(y - 1, x) && !map.CellIsObstacle(y - 1, x) && !isClosed(y - 1, x))
+    if (map.CellOnGrid(y - 1, x) && !map.CellIsObstacle(y - 1, x) && isClosed(y - 1, x) == -1)
     {
 
         tmp.i = y - 1;
         tmp.j = x;
+        successors.push_back(tmp);
 
-        if (!isOpened(tmp.i, tmp.j))
-        {
-            successors.push_back(tmp);
-        }
     }
-    if (map.CellOnGrid(y, x - 1) && !map.CellIsObstacle(y, x - 1) && !isClosed(y , x - 1))
+    if (map.CellOnGrid(y, x - 1) && !map.CellIsObstacle(y, x - 1) && isClosed(y , x - 1) == -1)
     {
 
         tmp.i = y;
         tmp.j = x - 1;
-
-        if (!isOpened(tmp.i, tmp.j))
-        {
-            successors.push_back(tmp);
-        }
+        successors.push_back(tmp);
     }
     if(options.allowdiagonal)
     {
-        if(map.CellOnGrid(y + 1, x + 1) && !map.CellIsObstacle(y + 1, x + 1) && !isClosed(y + 1 , x + 1))
+        if(map.CellOnGrid(y + 1, x + 1) && !map.CellIsObstacle(y + 1, x + 1) && isClosed(y + 1 , x + 1) == -1)
         {
             if((!map.CellIsObstacle(y, x + 1) && !map.CellIsObstacle(y + 1, x)) || options.allowsqueeze)
             {
@@ -131,59 +127,46 @@ std::list<Node> ISearch::findSuccessors(Node *curNode, const Map &map, const Env
                 {
                     tmp.i = y + 1;
                     tmp.j = x + 1;
+                    successors.push_back(tmp);
 
-                    if (!isOpened(tmp.i, tmp.j)) {
-                        successors.push_back(tmp);
-                    }
                 }
             }
         }
 
-        if(map.CellOnGrid(y - 1, x - 1) && !map.CellIsObstacle(y - 1, x - 1) && !isClosed(y - 1, x - 1))
+        if(map.CellOnGrid(y - 1, x - 1) && !map.CellIsObstacle(y - 1, x - 1) && isClosed(y - 1, x - 1) == -1)
         {
             if(((!map.CellIsObstacle(y, x - 1) || !map.CellIsObstacle(y - 1, x)) || options.allowsqueeze) &&
                     ((!map.CellIsObstacle(y, x - 1) && !map.CellIsObstacle(y - 1, x)) || options.cutcorners))
             {
                 tmp.i = y - 1;
                 tmp.j = x - 1;
+                successors.push_back(tmp);
 
-                if (!isOpened(tmp.i, tmp.j))
-                {
-                    successors.push_back(tmp);
-                }
             }
         }
-        if(map.CellOnGrid(y + 1, x - 1) && !map.CellIsObstacle(y + 1, x - 1) && !isClosed(y + 1, x - 1))
+        if(map.CellOnGrid(y + 1, x - 1) && !map.CellIsObstacle(y + 1, x - 1) && isClosed(y + 1, x - 1) == -1)
         {
             if(((!map.CellIsObstacle(y, x - 1) || !map.CellIsObstacle(y + 1, x)) || options.allowsqueeze) &&
                     ((!map.CellIsObstacle(y, x - 1) && !map.CellIsObstacle(y + 1, x)) || options.cutcorners))
             {
                 tmp.i = y + 1;
                 tmp.j = x - 1;
+                successors.push_back(tmp);
 
-                if (!isOpened(tmp.i, tmp.j))
-                {
-                    successors.push_back(tmp);
-                }
             }
         }
-        if(map.CellOnGrid(y - 1, x + 1) && !map.CellIsObstacle(y - 1, x + 1) && !isClosed(y - 1, x + 1))
+        if(map.CellOnGrid(y - 1, x + 1) && !map.CellIsObstacle(y - 1, x + 1) && isClosed(y - 1, x + 1) == -1)
         {
             if(((!map.CellIsObstacle(y, x + 1) || !map.CellIsObstacle(y - 1, x)) || options.allowsqueeze) &&
                     ((!map.CellIsObstacle(y, x + 1) && !map.CellIsObstacle(y - 1, x)) || options.cutcorners))
             {
                 tmp.i = y - 1;
                 tmp.j = x + 1;
-
-                if (!isOpened(tmp.i, tmp.j))
-                {
-                    successors.push_back(tmp);
-                }
+                successors.push_back(tmp);
             }
         }
     }
 
-    //need to implement
     return successors;
 }
 

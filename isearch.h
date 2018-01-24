@@ -18,8 +18,8 @@ class ISearch
 
     protected:
         virtual std::list<Node> findSuccessors(Node *curNode, const Map &map, const EnvironmentOptions &options);
-        bool isOpened(int i, int j);
-        bool isClosed(int i, int j);
+        int isOpened(int i, int j);
+        int isClosed(int i, int j);
         bool goalIsExpended();
         double Cost(Node fst, Node scn);
 

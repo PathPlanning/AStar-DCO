@@ -16,18 +16,16 @@ bool Dcmp(const Node& lhs, const Node& rhs)
 
 SearchResult Dijkstra::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options)
 {
-
-
     goal = map.getFinishNode();
     start = map.getStartNode();
     int tmpx = -1, tmpy = -1;
-    double sum = 0;
+    double sum = 0, cost = 0;
     unsigned int step = 0;
     Node  succ;
     Node *curr;
-    std::vector<Node>::iterator currit;
+    std::vector<Node>::iterator currit, tmpit;
     std::list<Node> succs;
-
+    int pos = 0;
     auto startpnt = std::chrono::high_resolution_clock::now();
     Open.push_back(start);
 
@@ -43,11 +41,22 @@ SearchResult Dijkstra::startSearch(ILogger *Logger, const Map &map, const Enviro
         int n = succs.size();
         for(int i = 0; i < n; i++)
         {
+
             succ = succs.front();
             succs.pop_front();
-            double cost = map.getCellSize() * Cost(*curr, succ);
+            if ((pos = isOpened(succ.i, succ.j)) != -1)
+            {
+                tmpit = Open.begin() + pos;
+                succ = *tmpit;
+            }
+
+            cost = Cost(*curr, succ);
             if(succ.g > curr->g + cost)
             {
+                if(pos != -1)
+                {
+                    Open.erase(tmpit);
+                }
                 succ.g = curr->g + cost;
                 succ.parent = curr;
                 Open.push_back(succ);
@@ -88,7 +97,7 @@ SearchResult Dijkstra::startSearch(ILogger *Logger, const Map &map, const Enviro
         auto res  = std::chrono::duration_cast<std::chrono::microseconds>(endpnt - startpnt).count();
         sresult.lppath = &lppath;
         sresult.hppath = &hppath;
-        sresult.pathlength = (float)(sum * map.getCellSize());
+        sresult.pathlength = (float)sum;
         sresult.numberofsteps = step;
         sresult.time = res;
         sresult.nodescreated = (unsigned int)(Open.size() + Close.size());

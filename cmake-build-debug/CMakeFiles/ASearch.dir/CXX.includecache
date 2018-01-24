@@ -1,0 +1,236 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.cpp
+astar.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h
+isearch.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.cpp
+config.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.h
+gl_const.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/gl_const.h
+tinyxml2.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.h
+iostream
+-
+sstream
+-
+algorithm
+-
+math.h
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.h
+string
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.cpp
+dijkstra.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.h
+isearch.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.cpp
+environmentoptions.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.h
+gl_const.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/gl_const.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/gl_const.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/ilogger.h
+map.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.h
+node.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h
+unordered_map
+-
+list
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.cpp
+isearch.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.h
+cfloat
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.h
+ilogger.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/ilogger.h
+searchresult.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/searchresult.h
+environmentoptions.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.h
+list
+-
+vector
+-
+math.h
+-
+limits
+-
+chrono
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.cpp
+jp_search.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.h
+astar.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/main.cpp
+mission.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.cpp
+map.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.h
+vector
+-
+cfloat
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.h
+iostream
+-
+gl_const.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/gl_const.h
+sstream
+-
+string
+-
+algorithm
+-
+tinyxml2.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.h
+node.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.cpp
+mission.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.h
+astar.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h
+dijkstra.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.h
+theta.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.h
+xmllogger.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.h
+gl_const.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/gl_const.h
+iostream
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.h
+map.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.h
+config.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.h
+isearch.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.h
+ilogger.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/ilogger.h
+searchresult.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/searchresult.h
+environmentoptions.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.h
+jp_search.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.h
+astar.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h
+dijkstra.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.h
+theta.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.h
+xmllogger.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/searchresult.h
+list
+-
+node.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.cpp
+theta.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.h
+astar.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.cpp
+tinyxml2.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.h
+new
+-
+stddef.h
+-
+stdarg.h
+-
+cstddef
+-
+cstdarg
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.h
+ctype.h
+-
+limits.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stddef.h
+-
+cctype
+-
+climits
+-
+cstdio
+-
+cstdlib
+-
+cstring
+-
+stdint.h
+-
+android/log.h
+-
+assert.h
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.cpp
+xmllogger.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.h
+iostream
+-
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.h
+tinyxml2.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.h
+ilogger.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/ilogger.h
+

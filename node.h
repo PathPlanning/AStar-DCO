@@ -37,6 +37,7 @@ struct Node
         H = a.H;
         F = a.F;
         parent = a.parent;
+        br = a.br;
     }
 
     ~Node()
