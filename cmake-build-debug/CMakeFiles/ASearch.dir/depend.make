@@ -74,7 +74,6 @@ CMakeFiles/ASearch.dir/main.cpp.o: ../xmllogger.h
 CMakeFiles/ASearch.dir/map.cpp.o: ../gl_const.h
 CMakeFiles/ASearch.dir/map.cpp.o: ../map.cpp
 CMakeFiles/ASearch.dir/map.cpp.o: ../map.h
-CMakeFiles/ASearch.dir/map.cpp.o: ../node.h
 CMakeFiles/ASearch.dir/map.cpp.o: ../tinyxml2.h
 
 CMakeFiles/ASearch.dir/mission.cpp.o: ../astar.h

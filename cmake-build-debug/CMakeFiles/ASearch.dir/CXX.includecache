@@ -119,8 +119,6 @@ algorithm
 -
 tinyxml2.h
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.h
-node.h
-/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h
 
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.cpp
 mission.h
@@ -163,6 +161,8 @@ xmllogger.h
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.h
 
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h
+cfloat
+-
 
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/searchresult.h
 list

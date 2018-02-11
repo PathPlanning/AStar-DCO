@@ -6,8 +6,7 @@ class Dijkstra : public ISearch
 {
     public:
         Dijkstra();
-        SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options) override;
-    private:
-
+    protected:
+        double computeHFromCellToCell(int i1, int j1, int i2, int j2, const EnvironmentOptions &options) override;
 };
 #endif

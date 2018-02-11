@@ -6,7 +6,7 @@
 #include <string>
 #include <algorithm>
 #include "tinyxml2.h"
-#include "node.h"
+
 
 //That's the class that stores BOTH grid map data AND start-goal locations.
 //getValue reads the input XML and fills the Map object.
@@ -39,8 +39,10 @@ class Map
         int getMapHeight() const;
         int getMapWidth() const;
         double getCellSize() const;
-        Node getStartNode() const;
-        Node getFinishNode() const;
+        int getStartI() const;
+        int getStartJ() const;
+        int getFinishI() const;
+        int getFinishJ() const;
 
 };
 

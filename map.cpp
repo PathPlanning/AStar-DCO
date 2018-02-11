@@ -352,25 +352,22 @@ double Map::getCellSize() const
       return cellSize;
 }
 
-Node Map::getStartNode() const
+int Map::getStartI() const
 {
-    Node start;
-    start.i = start_i;
-    start.j = start_j;
-    start.g = 0;
-    start.H = 0;
-    start.F = DBL_MAX;
-    start.parent = NULL;
-    return start;
+    return start_i;
 }
 
-Node Map::getFinishNode() const
+int Map::getStartJ() const
 {
-    Node finish;
-    finish.i = goal_i;
-    finish.j = goal_j;
-    finish.g = DBL_MAX;
-    finish.H = 0;
-    finish.F = DBL_MAX;
-    return finish;
+    return start_j;
+}
+
+int Map::getFinishI() const
+{
+    return goal_i;
+}
+
+int Map::getFinishJ() const
+{
+    return goal_j;
 }

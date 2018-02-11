@@ -1,6 +1,7 @@
 #ifndef NODE_H
 #define NODE_H
 
+#include <cfloat>
 //That's the data structure for storing a single search node.
 //Although one might realize A* pathfinder relying only on g-value,
 //it's a good idea to store f- and h-values explicitly for the sake of simplicity
@@ -26,7 +27,14 @@ struct Node
 
     Node()
     {
-        parent = NULL;
+
+        i = -1;
+        j = -1;
+        g = DBL_MAX;
+        H = 0;
+        F = DBL_MAX;
+        parent = nullptr;
+
     }
 
     Node(Node const& a )
