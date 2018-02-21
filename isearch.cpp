@@ -250,17 +250,14 @@ void ISearch::searchMin()
         if (Open[i].size() && currFMin >= Open[i].front().F)
         {
             if(currFMin != Open[i].front().F || ((breakingties && Open[i].front().g > currG) || (!breakingties && Open[i].front().g < currG)))
+            {
                 currMinIndex = i;
                 currFMin = Open[i].front().F;
                 currG = Open[i].front().g;
+            }
 
         }
-        /* if(Open[i].size() && currFMin == Open[i].front().F && ((breakingties && Open[i].front().g > currG) || (!breakingties && Open[i].front().g < currG)))
-        {
-            currMinIndex = i;
-            currFMin = Open[i].front().F;
-            currG = Open[i].front().g;
-        }*/
+
     }
 }
 
