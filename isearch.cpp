@@ -11,6 +11,7 @@ ISearch::ISearch()
     goal.g = DBL_MAX;
     goal.H = 0;
     goal.F = DBL_MAX;
+    openSize = 0;
 
 }
 
@@ -21,11 +22,11 @@ ISearch::~ISearch(void)
 
 void ISearch::addToOpen(Node elem)
 {
-    std::list<Node>::const_iterator placetoinsert = Open.end(), old;
+    std::list<Node>::const_iterator placetoinsert = Open[elem.i].end(), old;
     std::list<Node>::const_iterator iterator;
 
-    bool placefound = false, flag2 = false;
-    for (iterator = Open.begin(); iterator != Open.end(); ++iterator)
+    bool placefound = false, oldfound = false;
+    for (iterator = Open[elem.i].begin(); iterator != Open[elem.i].end(); ++iterator)
     {
         if((*iterator).F > elem.F and !placefound)
         {
@@ -44,16 +45,18 @@ void ISearch::addToOpen(Node elem)
             else
             {
                 old = iterator;
-                flag2 = true;
+                oldfound = true;
                 if(placefound)
                     break;
             }
         }
     }
-    Open.insert(placetoinsert, elem);
-    if(flag2)
+    Open[elem.i].insert(placetoinsert, elem);
+    openSize += 1;
+    if(oldfound)
     {
-        Open.erase(old);
+        Open[elem.i].erase(old);
+        openSize -= 1;
     }
 
 
@@ -67,7 +70,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     goal.j = map.getFinishJ();
     start.i = map.getStartI();
     start.j = map.getStartJ();
-
+    Open.resize(map.getMapHeight());
     int tmpx = -1, tmpy = -1;
     std::vector<Node>::iterator currit,  tmpit;
     double sum = 0, cost = 0;
@@ -81,14 +84,23 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     start.F = start.g + hweight * start.H;
     start.br = breakingties;
     goal.br = breakingties;
-    Open.push_back(start);
+    addToOpen(start);
+    currMinIndex = start.i;
 
 
     do
     {
-        curr = Open.front();
+        curr = Open[currMinIndex].front();
         Close.insert({curr.i *  width + curr.j, curr});
-        Open.pop_front();
+        Open[currMinIndex].pop_front();
+        openSize -= 1;
+
+        if(curr == goal)
+        {
+            goal = Close.at(goal.i * width + goal.j);
+            break;
+        }
+
         step++;
         succs = findSuccessors(&curr, map, options);
         int n = succs.size();
@@ -107,10 +119,11 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
                 addToOpen(succ);
             }
         }
+        searchMin();
     }
-    while(Open.size() && !goalIsExpended());
+    while(openSize);
 
-    if(!goalIsExpended())
+    if(!isClosed(goal.i, goal.j))
     {
         sresult.pathfound = false;
     }
@@ -144,22 +157,11 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
         sresult.pathlength = (float)sum;
         sresult.numberofsteps = step;
         sresult.time = ((double)res)/1000;
-        sresult.nodescreated = (unsigned int)(Open.size() + Close.size());
+        sresult.nodescreated = (unsigned int)(openSize + Close.size());
 
     }
 
     return sresult;
-}
-
-
-bool ISearch::goalIsExpended()
-{
-    if(isClosed(goal.i, goal.j))
-    {
-        goal =  Close.at(goal.i * width + goal.j);
-        return true;
-    }
-    return false;
 }
 
 double ISearch::Cost(Node fst, Node scn)
@@ -234,18 +236,33 @@ std::list<Node> ISearch::findSuccessors(Node *curNode, const Map &map, const Env
 
 bool ISearch::isClosed(int i, int j)
 {
-    try
-    {
-        Close.at(i * width + j);
-    }
-    catch(std::out_of_range e)
-    {
-        return false;
-    }
-    return true;
+
+    return (Close.find(i * width + j) != Close.end());
+
 }
 
+void ISearch::searchMin()
+{
+    double currFMin = DBL_MAX;
+    double currG;
+    for (int i = 0; i < Open.size(); i++)
+    {
+        if (Open[i].size() && currFMin >= Open[i].front().F)
+        {
+            if(currFMin != Open[i].front().F || ((breakingties && Open[i].front().g > currG) || (!breakingties && Open[i].front().g < currG)))
+                currMinIndex = i;
+                currFMin = Open[i].front().F;
+                currG = Open[i].front().g;
 
+        }
+        /* if(Open[i].size() && currFMin == Open[i].front().F && ((breakingties && Open[i].front().g > currG) || (!breakingties && Open[i].front().g < currG)))
+        {
+            currMinIndex = i;
+            currFMin = Open[i].front().F;
+            currG = Open[i].front().g;
+        }*/
+    }
+}
 
 /*void ISearch::makePrimaryPath(Node curNode)
 {
