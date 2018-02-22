@@ -260,13 +260,3 @@ void ISearch::searchMin()
 
     }
 }
-
-/*void ISearch::makePrimaryPath(Node curNode)
-{
-    //need to implement
-}*/
-
-/*void ISearch::makeSecondaryPath()
-{
-    //need to implement
-}*/
