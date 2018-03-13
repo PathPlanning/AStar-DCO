@@ -25,7 +25,8 @@ bool Config::getConfig(const char *FileName)
     tinyxml2::XMLElement *root = 0, *algorithm = 0, *element = 0, *options = 0;
 
     tinyxml2::XMLDocument doc;
-    if (doc.LoadFile(FileName) != tinyxml2::XMLError::XML_SUCCESS) {
+    if (doc.LoadFile(FileName) != tinyxml2::XMLError::XML_SUCCESS)
+    {
         std::cout << "Error opening XML file!" << std::endl;
         return false;
     }
