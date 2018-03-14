@@ -22,8 +22,10 @@ ISearch::~ISearch(void)
 
 }
 
+
 void ISearch::addToOpen(Node elem)
 {
+    bool placefound = false, oldfound = false;
     switch (contType)
     {
         case 0:
@@ -31,13 +33,13 @@ void ISearch::addToOpen(Node elem)
             std::list<Node>::const_iterator placetoinsert = VLOpen[elem.i].end(), old;
             std::list<Node>::const_iterator iterator, ending = std::prev(VLOpen[elem.i].end(), 1);
 
-            bool placefound = false, oldfound = false;
+
             for (iterator = VLOpen[elem.i].begin(); iterator != VLOpen[elem.i].end(); ++iterator)
             {
                 if ((*iterator).F == elem.F and !placefound)
                 {
                     double tmpf = (*iterator).F;
-                    while (iterator !=  ending && (*iterator).F == tmpf && ((breakingties && (*iterator).g > elem.g) || (!breakingties && (*iterator).g < elem.g)))
+                    while (iterator != ending && (*iterator).F == tmpf && ((breakingties && (*iterator).g > elem.g) || (!breakingties && (*iterator).g < elem.g)) && !((*iterator) == elem))
                     {
                         ++iterator;
                     }
@@ -45,24 +47,23 @@ void ISearch::addToOpen(Node elem)
                     placetoinsert = iterator;
                     placefound = true;
                 }
-                if ((*iterator).F > elem.F and !placefound)
+                else if ((*iterator).F > elem.F and !placefound)
                 {
-
                     placetoinsert = iterator;
                     placefound = true;
-
                 }
                 if ((*iterator) == elem)
                 {
                     if (elem.F > (*iterator).F)
                     {
                         return;
-                    } else
+                    }
+                    else
                     {
                         old = iterator;
                         oldfound = true;
-                        if (placefound)
-                            break;
+                        break;
+
                     }
                 }
             }
@@ -78,35 +79,31 @@ void ISearch::addToOpen(Node elem)
         case 1:
         {
             std::list<Node>::const_iterator placetoinsert = LOpen.end(), old;
-            std::list<Node>::iterator iterator = LOpen.begin(), ending = std::prev(LOpen.end(), 1);
-            bool placefound = false, flag2 = false;
-            for (; iterator != LOpen.end(); ++iterator)
+            std::list<Node>::iterator iterator, ending = std::prev(LOpen.end(), 1);
+
+            for (iterator = LOpen.begin(); iterator != LOpen.end(); ++iterator)
             {
                 if ((*iterator).F == elem.F and !placefound)
                 {
                     double tmpf = (*iterator).F;
-                    while (iterator !=  ending && (*iterator).F == tmpf && ((breakingties && (*iterator).g > elem.g) || (!breakingties && (*iterator).g < elem.g)))
+                    while (iterator !=  ending && (*iterator).F == tmpf && ((breakingties && (*iterator).g > elem.g) || (!breakingties && (*iterator).g < elem.g)) && !((*iterator) == elem))
                     {
                         ++iterator;
                     }
 
                     double tmpg = elem.g;
-                    while (iterator !=  ending && (*iterator).F == tmpf && (*iterator).g == tmpg && (*iterator).i > elem.i)
+                    while (iterator !=  ending && (*iterator).F == tmpf && (*iterator).g == tmpg && (*iterator).i > elem.i && !((*iterator) == elem))
                     {
-                                ++iterator;
+                        ++iterator;
                     }
 
                     placetoinsert = iterator;
                     placefound = true;
                 }
-                if ((*iterator).F > elem.F and !placefound)
+                else if ((*iterator).F > elem.F and !placefound)
                 {
-
-
-
                     placetoinsert = iterator;
                     placefound = true;
-
                 }
                 if ((*iterator) == elem)
                 {
@@ -117,23 +114,30 @@ void ISearch::addToOpen(Node elem)
                     else
                     {
                         old = iterator;
-                        flag2 = true;
-                        if (placefound)
-                            break;
+                        oldfound = true;
+                        break;
                     }
                 }
             }
             LOpen.insert(placetoinsert, elem);
             openSize += 1;
-            if (flag2)
+            if (oldfound)
             {
                 LOpen.erase(old);
                 openSize -= 1;
             }
             return;
         }
+        case 2:
+        {
+
+            return;
+
+        }
     }
 }
+
+
 
 Node ISearch::GetFromOpen()
 {
@@ -154,6 +158,11 @@ Node ISearch::GetFromOpen()
             LOpen.pop_front();
             openSize -= 1;
             return result;
+
+        }
+        case 2:
+        {
+
 
         }
     }
@@ -180,10 +189,6 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     std::list<Node> succs;
 
     auto startpnt = std::chrono::high_resolution_clock::now();
-    std::chrono::time_point<std::chrono::high_resolution_clock> startadd, finadd;
-    long long int resadd = 0;
-
-
     start.H = computeHFromCellToCell(start.i, start.j, goal.i, goal.j, options);
     start.F = start.g + hweight * start.H;
     start.br = breakingties;
@@ -233,7 +238,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
         RefreshOpen();
     }
     while (openSize);
-    //std::cout << LOpen.size() + Close.size() << "\n";
+
     if (!isClosed(goal.i, goal.j))
     {
         sresult.pathfound = false;
@@ -378,7 +383,10 @@ void ISearch::RefreshOpen()
         {
             return;
         }
-
+        case 2:
+        {
+            return;
+        }
 
     }
 }

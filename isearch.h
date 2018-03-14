@@ -5,10 +5,18 @@
 #include "environmentoptions.h"
 #include <list>
 #include <vector>
+#include <set>
 #include <math.h>
 #include <limits>
 #include <chrono>
 
+struct comp
+{
+    inline bool operator()(const Node& left,const Node& right)
+    {
+        return left.F < right.F;
+    }
+};
 
 class ISearch
 {
@@ -31,9 +39,9 @@ class ISearch
         std::list<Node> lppath, hppath;
         double hweight;
         bool breakingties;
-        std::vector <std::list <Node>> VLOpen;
-        std::list <Node> LOpen;
-
+        std::vector <std::list <Node>> VLOpen; // contType = 0
+        std::list <Node> LOpen;                // contType = 1
+        std::set<Node, comp> SOpen;                  // contType = 2
         std::unordered_map <int, Node> Close;
         Node goal;
         Node start;
@@ -43,3 +51,6 @@ class ISearch
         int contType;
 };
 #endif
+
+
+

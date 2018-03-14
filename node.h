@@ -25,6 +25,11 @@ struct Node
         return i == other.i && j == other.j;
     }
 
+     bool operator < (const Node &b) const
+    {
+        return F < b.F;
+    }
+
     Node()
     {
 
