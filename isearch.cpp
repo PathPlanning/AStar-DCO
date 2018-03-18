@@ -12,7 +12,7 @@ ISearch::ISearch()
     goal.H = 0;
     goal.F = DBL_MAX;
     openSize = 0;
-    contType = 0;
+    contType = 2;
 
 
 }
@@ -130,7 +130,30 @@ void ISearch::addToOpen(Node elem)
         }
         case 2:
         {
+            //std::cout<<elem.F<<" "<< elem.i<<" "<< elem.j<<" "<<SOpen.size()<<" elem\n\n";
+            auto a = std::find(SOpen.begin(), SOpen.end(), elem);
 
+            if(a != SOpen.end())
+            {
+                if ( a->F > elem.F)
+                {
+                    SOpen.erase(a);
+
+                    openSize -= 1;
+                }
+                else
+                {
+                    return;
+                }
+            }
+
+            SOpen.insert(elem);
+            openSize += 1;
+            //for(auto it = SOpen.begin(); it != SOpen.end(); ++it)
+            //{
+            //    std::cout<<it->F<<" "<< it->i<<" "<< it->j<<" "<<SOpen.size()<<"\n";
+            //}
+            //std::cout<<"\n";
             return;
 
         }
@@ -162,7 +185,11 @@ Node ISearch::GetFromOpen()
         }
         case 2:
         {
-
+            auto a = SOpen.begin();
+            result = *a;
+            SOpen.erase(a);
+            openSize -= 1;
+            return result;
 
         }
     }
@@ -203,6 +230,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     {
 
         curr = GetFromOpen();
+        //std::cout<<curr.F<<" "<< curr.i<<" "<< curr.j<<" "<<SOpen.size()<<" out \n\n";
 
         Close.insert({curr.i * width + curr.j, curr});
 

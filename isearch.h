@@ -14,7 +14,7 @@ struct comp
 {
     inline bool operator()(const Node& left,const Node& right)
     {
-        return left.F < right.F;
+        return !(left.F > right.F);
     }
 };
 
