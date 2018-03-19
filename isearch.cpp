@@ -11,8 +11,10 @@ ISearch::ISearch()
     goal.g = DBL_MAX;
     goal.H = 0;
     goal.F = DBL_MAX;
+    start.br = breakingties;
+    goal.br = breakingties;
     openSize = 0;
-    contType = 2;
+    contType = 1;
 
 
 }
@@ -149,11 +151,11 @@ void ISearch::addToOpen(Node elem)
 
             SOpen.insert(elem);
             openSize += 1;
-            //for(auto it = SOpen.begin(); it != SOpen.end(); ++it)
-            //{
-            //    std::cout<<it->F<<" "<< it->i<<" "<< it->j<<" "<<SOpen.size()<<"\n";
-            //}
-            //std::cout<<"\n";
+            /*for(auto it = SOpen.begin(); it != SOpen.end(); ++it)
+            {
+                std::cout<<it->F<<" "<< it->g<<" "<< it->i<<" "<<SOpen.size()<<"\n";
+            }
+            std::cout<<"\n";*/
             return;
 
         }
@@ -230,7 +232,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     {
 
         curr = GetFromOpen();
-        //std::cout<<curr.F<<" "<< curr.i<<" "<< curr.j<<" "<<SOpen.size()<<" out \n\n";
+        //std::cout<<curr.F<<" "<< curr.i<<" "<< curr.j<<" "<<curr.br<< " out \n\n";
 
         Close.insert({curr.i * width + curr.j, curr});
 
@@ -256,6 +258,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
                 succ.F = succ.g + hweight * succ.H;
                 succ.br = breakingties;
                 succ.parent = &Close.at(curr.i * width + curr.j);
+                succ.br = breakingties;
 
                 addToOpen(succ);
 
