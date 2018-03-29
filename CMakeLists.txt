@@ -29,6 +29,6 @@ set(SOURCE_FILES
         jp_search.h
         theta.h
         environmentoptions.h
-        )
+        OConteiner.cpp OConteiner.h)
 add_executable(ASearch ${SOURCE_FILES})
 

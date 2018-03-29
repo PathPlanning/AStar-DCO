@@ -3,38 +3,13 @@
 #include "ilogger.h"
 #include "searchresult.h"
 #include "environmentoptions.h"
+#include "OConteiner.h"
 #include <list>
 #include <vector>
 #include <set>
 #include <math.h>
 #include <limits>
 #include <chrono>
-
-struct comp
-{
-    inline bool operator()(const Node& left,const Node& right)
-    {
-        if (left.F < right.F)
-        {
-            return true;
-        }
-        else if (left.F == right.F)
-        {
-            if ((left.br && left.g > right.g) || (!left.br && left.g < right.g))
-            {
-                return true;
-            }
-            else if(left.i == right.i)
-            {
-                if(left.i < right.i)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
-};
 
 class ISearch
 {
@@ -49,24 +24,19 @@ class ISearch
         bool isClosed(int i, int j);
 
         double Cost(Node fst, Node scn);
-        void addToOpen(Node elem);
-        Node GetFromOpen();
-        void RefreshOpen();
 
         SearchResult sresult;
         std::list<Node> lppath, hppath;
         double hweight;
         bool breakingties;
-        std::vector <std::list <Node>> VLOpen; // contType = 0
-        std::list <Node> LOpen;                // contType = 1
-        std::set<Node, comp> SOpen;                  // contType = 2
+
         std::unordered_map <int, Node> Close;
+        OConteiner Open;
         Node goal;
         Node start;
         int width;
-        int openSize;
-        int currMinIndex;
         int contType;
+        bool dupl;
 };
 #endif
 
