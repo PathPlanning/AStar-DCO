@@ -11,7 +11,7 @@ ISearch::ISearch()
     goal.g = DBL_MAX;
     goal.H = 0;
     goal.F = DBL_MAX;
-    contType = 0;
+    contType = 2;
 }
 
 ISearch::~ISearch(void)

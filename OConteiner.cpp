@@ -18,20 +18,28 @@ bool gMaxCompare(const Node &lhs, const Node &rhs)
     return lhs.F < rhs.F;
 }
 
-bool gMinCompare(const Node &lhs, const Node &rhs)
+inline bool gMinCompare(const Node &lhs, const Node &rhs)
 {
-    if (lhs.F == rhs.F)
+    if (lhs.F < rhs.F)
     {
-        if (lhs.g == rhs.g)
+        return true;
+    }
+    else if (lhs.F == rhs.F)
+    {
+        if (lhs.g < rhs.g)
         {
-            return lhs.i < rhs.i;
+            return true;
         }
-        else
+        else if(lhs.g == rhs.g)
         {
-            return lhs.g < rhs.g;
+            if(lhs.i < rhs.i)
+            {
+                return true;
+            }
         }
     }
-    return lhs.F < rhs.F;
+
+    return false;
 }
 
 
@@ -115,11 +123,28 @@ void OConteiner::Add(Node elem)
 
             for (iterator = VctLst[elem.i].begin(); iterator != VctLst[elem.i].end(); ++iterator)
             {
-                if(!(*compare)((*iterator), elem) and !placefound)
+
+                if ((*iterator).F == elem.F and !placefound)
+                {
+                    double tmpf = (*iterator).F;
+                    while (iterator != ending && (*iterator).F == tmpf && ((breakingties && (*iterator).g > elem.g) || (!breakingties && (*iterator).g < elem.g)) && !((*iterator) == elem))
+                    {
+                        ++iterator;
+                    }
+
+                    placetoinsert = iterator;
+                    placefound = true;
+                }
+                else if ((*iterator).F > elem.F and !placefound)
                 {
                     placetoinsert = iterator;
                     placefound = true;
                 }
+                /*if(!(*compare)((*iterator), elem) && !placefound)
+                {
+                    placetoinsert = iterator;
+                    placefound = true;
+                }*/
 
                 if ((*iterator) == elem)
                 {
@@ -152,7 +177,30 @@ void OConteiner::Add(Node elem)
 
             for (iterator = Lst.begin(); iterator != Lst.end(); ++iterator)
             {
-                if(!(*compare)((*iterator), elem) and !placefound)
+                /*if(!(*compare)((*iterator), elem) && !placefound)
+                {
+                    placetoinsert = iterator;
+                    placefound = true;
+                }*/
+
+                if ((*iterator).F == elem.F and !placefound)
+                {
+                    double tmpf = (*iterator).F;
+                    while (iterator !=  ending && (*iterator).F == tmpf && ((breakingties && (*iterator).g > elem.g) || (!breakingties && (*iterator).g < elem.g)) && !((*iterator) == elem))
+                    {
+                        ++iterator;
+                    }
+
+                    double tmpg = elem.g;
+                    while (iterator !=  ending && (*iterator).F == tmpf && (*iterator).g == tmpg && (*iterator).i > elem.i && !((*iterator) == elem))
+                    {
+                        ++iterator;
+                    }
+
+                    placetoinsert = iterator;
+                    placefound = true;
+                }
+                else if ((*iterator).F > elem.F and !placefound)
                 {
                     placetoinsert = iterator;
                     placefound = true;
@@ -178,6 +226,11 @@ void OConteiner::Add(Node elem)
                 Lst.erase(old);
                 size -= 1;
             }
+           /*for (auto iterator1 = Lst.begin(); iterator1 != Lst.end(); ++iterator1)
+            {
+                std::cout<<iterator1->F<<" "<<iterator1->g<<" "<<iterator1->i<<"\n";
+            }
+            std::cout<<"\n";*/
             return;
         }
         case 2:
