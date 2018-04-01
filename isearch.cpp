@@ -11,7 +11,7 @@ ISearch::ISearch()
     goal.g = DBL_MAX;
     goal.H = 0;
     goal.F = DBL_MAX;
-    contType = 2;
+    contType = 0;
 }
 
 ISearch::~ISearch(void)
@@ -83,7 +83,6 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
         sresult.pathfound = true;
 
         Node *curr1 = &goal;
-
 
         while (curr1 != NULL)
         {
