@@ -11,7 +11,8 @@ ISearch::ISearch()
     goal.g = DBL_MAX;
     goal.H = 0;
     goal.F = DBL_MAX;
-    contType = 0;
+    contType = 3;
+    dupl = 1;
 }
 
 ISearch::~ISearch(void)
@@ -22,7 +23,7 @@ ISearch::~ISearch(void)
 
 SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options)
 {
-    Open = OConteiner(contType, breakingties, map);
+    Open = OConteiner(contType, breakingties, dupl, map);
     width = map.getMapWidth();
     goal.i = map.getFinishI();
     goal.j = map.getFinishJ();
@@ -44,8 +45,12 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
 
     do
     {
+        do
+        {
+            curr = Open.GetOptimal();
+        }
+        while(dupl && isClosed(curr.i, curr.j));
 
-        curr = Open.GetOptimal();
         Close.insert({curr.i * width + curr.j, curr});
 
         if (curr == goal)

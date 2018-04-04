@@ -1,6 +1,7 @@
 #include <list>
 #include <vector>
 #include <set>
+#include <queue>
 #include "node.h"
 #include "map.h"
 
@@ -12,7 +13,7 @@ class OConteiner
 {
 public:
     OConteiner();
-    OConteiner(int ctype, bool brts, const Map &map);
+    OConteiner(int ctype, bool brts, bool endupl, const Map &map);
     OConteiner(OConteiner const &a);
     ~OConteiner(void);
     void Add(Node elem);
@@ -28,9 +29,11 @@ protected:
     int vlminindex;
     long int size;
     bool (*compare)(const Node&, const Node &);
-    std::vector <std::list <Node>> VctLst;                          // contType = 0
-    std::list <Node> Lst;                                           // contType = 1
-    std::set<Node, decltype(compare)> St;                           // contType = 2
+    std::vector <std::list <Node>> VctLst;                                  // contType = 0
+    std::list <Node> Lst;                                                   // contType = 1
+    std::set <Node, decltype(compare)> St;                                  // contType = 2
+    std::priority_queue <Node, std::vector<Node>, decltype(compare)> Pq;    // contType = 3
+
 
 };
 

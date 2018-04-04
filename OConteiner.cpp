@@ -8,7 +8,8 @@ bool gMaxCompare(const Node &lhs, const Node &rhs)
     {
         if (lhs.g == rhs.g)
         {
-            return lhs.i < rhs.i;
+            return lhs.i < rhs.i || lhs.i == rhs.i && lhs.j < rhs.j;
+
         }
         else
         {
@@ -24,7 +25,7 @@ inline bool gMinCompare(const Node &lhs, const Node &rhs)
     {
         if (lhs.g == rhs.g)
         {
-            return lhs.i < rhs.i;
+            return lhs.i < rhs.i || lhs.i == rhs.i && lhs.j < rhs.j;
         }
         else
         {
@@ -32,6 +33,16 @@ inline bool gMinCompare(const Node &lhs, const Node &rhs)
         }
     }
     return lhs.F < rhs.F;
+}
+
+bool gMaxComparePQ(const Node &lhs, const Node &rhs)
+{
+    return !gMaxCompare(lhs, rhs);
+}
+
+bool gMinComparePQ(const Node &lhs, const Node &rhs)
+{
+    return !gMinCompare(lhs, rhs);
 }
 
 
@@ -50,11 +61,12 @@ OConteiner::~OConteiner()
 
 }
 
-OConteiner::OConteiner(int ctype, bool brts, const Map &map)
+OConteiner::OConteiner(int ctype, bool brts,bool endupl ,const Map &map)
 {
+    size = 0;
     type = ctype;
     breakingties = brts;
-
+    dupl = endupl;
     if(breakingties)
     {
         compare = &gMaxCompare;
@@ -78,6 +90,19 @@ OConteiner::OConteiner(int ctype, bool brts, const Map &map)
         case 2:
         {
             St = std::set<Node, bool(*)(const Node&, const Node&)>(compare);
+            break;
+        }
+        case 3:
+        {
+            if(breakingties)
+            {
+                compare = &gMaxComparePQ;
+            }
+            else
+            {
+                compare = &gMinComparePQ;
+            }
+            Pq = std::priority_queue<Node, std::vector<Node>, bool(*)(const Node&, const Node&)>(compare);
             break;
         }
     }
@@ -117,6 +142,8 @@ void OConteiner::Add(Node elem)
                 {
                     placetoinsert = iterator;
                     placefound = true;
+                    if(dupl) break;
+
                 }
 
                 if ((*iterator) == elem)
@@ -125,7 +152,7 @@ void OConteiner::Add(Node elem)
                     {
                         return;
                     }
-                    else
+                    else if(!dupl)
                     {
                         old = iterator;
                         oldfound = true;
@@ -134,7 +161,7 @@ void OConteiner::Add(Node elem)
             }
             VctLst[elem.i].insert(placetoinsert, elem);
             size += 1;
-            if (oldfound)
+            if (oldfound && !dupl)
             {
                 VctLst[elem.i].erase(old);
                 size -= 1;
@@ -152,14 +179,15 @@ void OConteiner::Add(Node elem)
                 {
                     placetoinsert = iterator;
                     placefound = true;
+                    if(dupl) break;
                 }
-                if ((*iterator) == elem)
+                if ((*iterator) == elem )
                 {
                     if (elem.F > (*iterator).F)
                     {
                         return;
                     }
-                    else
+                    else if(!dupl)
                     {
                         old = iterator;
                         oldfound = true;
@@ -169,7 +197,10 @@ void OConteiner::Add(Node elem)
 
             Lst.insert(placetoinsert, elem);
             size += 1;
-            if (oldfound)
+
+
+
+            if (oldfound && !dupl)
             {
                 Lst.erase(old);
                 size -= 1;
@@ -178,22 +209,32 @@ void OConteiner::Add(Node elem)
         }
         case 2:
         {
-            auto a = std::find(St.begin(), St.end(), elem);
-
-            if(a != St.end())
+            if(!dupl)
             {
-                if ( a->F > elem.F)
+                auto a = std::find(St.begin(), St.end(), elem);
+                if (a != St.end())
                 {
-                    St.erase(a);
-                    size -= 1;
-                }
-                else
-                {
-                    return;
+                    if (a->F > elem.F)
+                    {
+                        St.erase(a);
+                        size -= 1;
+                    } else
+                    {
+                        return;
+                    }
                 }
             }
+            if(St.insert(elem).second)
+            {
+                size += 1;
+            }
+            return;
 
-            St.insert(elem);
+        }
+        case 3:
+        {
+
+            Pq.push(elem);
             size += 1;
             return;
 
@@ -251,6 +292,14 @@ Node OConteiner::GetOptimal()
             size -= 1;
             return result;
 
+        }
+        case 3:
+        {
+            auto a = Pq.top();
+            result = a;
+            Pq.pop();
+            size -= 1;
+            return result;
         }
     }
 }
