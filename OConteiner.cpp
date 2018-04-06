@@ -105,6 +105,23 @@ OConteiner::OConteiner(int ctype, bool brts,bool endupl ,const Map &map)
             Pq = std::priority_queue<Node, std::vector<Node>, bool(*)(const Node&, const Node&)>(compare);
             break;
         }
+        case 4:
+        {
+            if(breakingties)
+            {
+                compare = &gMaxComparePQ;
+            }
+            else
+            {
+                compare = &gMinComparePQ;
+            }
+            VctPq.resize(map.getMapHeight());
+            for(int i = 0; i < VctPq.size(); i++)
+            {
+                VctPq[i]= std::priority_queue<Node, std::vector<Node>, bool(*)(const Node&, const Node&)>(compare);
+            }
+
+        }
     }
 
 }
@@ -239,6 +256,14 @@ void OConteiner::Add(Node elem)
             return;
 
         }
+        case 4:
+        {
+
+            VctPq[elem.i].push(elem);
+            size += 1;
+            return;
+
+        }
     }
 }
 
@@ -298,6 +323,29 @@ Node OConteiner::GetOptimal()
             auto a = Pq.top();
             result = a;
             Pq.pop();
+            size -= 1;
+            return result;
+        }
+        case 4:
+        {
+            double currFMin = DBL_MAX;
+            double currG;
+            for (int i = 0; i < VctPq.size(); i++)
+            {
+                if (VctPq[i].size() && currFMin >= VctPq[i].top().F)
+                {
+                    if (currFMin != VctPq[i].top().F || ((breakingties && VctPq[i].top().g > currG) || (!breakingties && VctPq[i].top().g < currG)))
+                    {
+                        vlminindex = i;
+                        currFMin = VctPq[i].top().F;
+                        currG = VctPq[i].top().g;
+                    }
+
+                }
+
+            }
+            result = VctPq[vlminindex].top();
+            VctPq[vlminindex].pop();
             size -= 1;
             return result;
         }
