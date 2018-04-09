@@ -33,8 +33,8 @@ protected:
     std::list <Node> Lst;                                                   // contType = 1
     std::set <Node, decltype(compare)> St;                                  // contType = 2
     std::priority_queue <Node, std::vector<Node>, decltype(compare)> Pq;    // contType = 3
-    std::vector<std::priority_queue <Node, std::vector<Node>, decltype(compare)>> VctPq;
-
+    std::vector<std::priority_queue <Node, std::vector<Node>, decltype(compare)>> VctPq; // contType = 4
+    std::vector<std::set <Node, decltype(compare)>> VctSt; // contType = 5
 };
 
 

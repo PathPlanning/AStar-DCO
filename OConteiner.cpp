@@ -9,7 +9,6 @@ bool gMaxCompare(const Node &lhs, const Node &rhs)
         if (lhs.g == rhs.g)
         {
             return lhs.i < rhs.i || lhs.i == rhs.i && lhs.j < rhs.j;
-
         }
         else
         {
@@ -119,6 +118,15 @@ OConteiner::OConteiner(int ctype, bool brts,bool endupl ,const Map &map)
             for(int i = 0; i < VctPq.size(); i++)
             {
                 VctPq[i]= std::priority_queue<Node, std::vector<Node>, bool(*)(const Node&, const Node&)>(compare);
+            }
+
+        }
+        case 5:
+        {
+            VctSt.resize(map.getMapHeight());
+            for(int i = 0; i < VctSt.size(); i++)
+            {
+                VctSt[i]= std::set<Node, bool(*)(const Node&, const Node&)>(compare);
             }
 
         }
@@ -264,6 +272,31 @@ void OConteiner::Add(Node elem)
             return;
 
         }
+        case 5:
+        {
+
+            if(!dupl)
+            {
+                auto a = std::find(VctSt[elem.i].begin(), VctSt[elem.i].end(), elem);
+                if (a != VctSt[elem.i].end())
+                {
+                    if (a->F > elem.F)
+                    {
+                        VctSt[elem.i].erase(a);
+                        size -= 1;
+                    } else
+                    {
+                        return;
+                    }
+                }
+            }
+            if(VctSt[elem.i].insert(elem).second)
+            {
+                size += 1;
+            }
+            return;
+
+        }
     }
 }
 
@@ -346,6 +379,30 @@ Node OConteiner::GetOptimal()
             }
             result = VctPq[vlminindex].top();
             VctPq[vlminindex].pop();
+            size -= 1;
+            return result;
+        }
+        case 5:
+        {
+            double currFMin = DBL_MAX;
+            double currG;
+            for (int i = 0; i < VctSt.size(); i++)
+            {
+                if (VctSt[i].size() && currFMin >= VctSt[i].begin()->F)
+                {
+                    if (currFMin != VctSt[i].begin()->F || ((breakingties && VctSt[i].begin()->g > currG) || (!breakingties && VctSt[i].begin()->g < currG)))
+                    {
+                        vlminindex = i;
+                        currFMin = VctSt[i].begin()->F;
+                        currG = VctSt[i].begin()->g;
+                    }
+
+                }
+
+            }
+            auto a = VctSt[vlminindex].begin();
+            result = *a;
+            VctSt[vlminindex].erase(a);
             size -= 1;
             return result;
         }
