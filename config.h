@@ -12,6 +12,7 @@ class Config
 
     public:
         double*         SearchParams;
+        int *           OpenStructure;
         std::string*    LogParams;
         unsigned int    N;
 

@@ -11,8 +11,8 @@ ISearch::ISearch()
     goal.g = DBL_MAX;
     goal.H = 0;
     goal.F = DBL_MAX;
-    contType = 3;
-    dupl = 1;
+    contType = 0;
+    dupl = 0;
 }
 
 ISearch::~ISearch(void)
@@ -21,8 +21,10 @@ ISearch::~ISearch(void)
 }
 
 
-SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options)
+SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, const int opentype, const int duplicate)
 {
+    dupl = duplicate;
+    contType = opentype;
     Open = OConteiner(contType, breakingties, dupl, map);
     width = map.getMapWidth();
     goal.i = map.getFinishI();

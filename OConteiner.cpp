@@ -66,13 +66,28 @@ OConteiner::OConteiner(int ctype, bool brts,bool endupl ,const Map &map)
     type = ctype;
     breakingties = brts;
     dupl = endupl;
+
     if(breakingties)
     {
-        compare = &gMaxCompare;
+        if(type == 3 || type == 4)
+        {
+            compare = &gMaxComparePQ;
+        }
+        else
+        {
+            compare = &gMaxCompare;
+        }
     }
     else
     {
-        compare = &gMinCompare;
+        if(type == 3 || type == 4)
+        {
+            compare = &gMinComparePQ;
+        }
+        else
+        {
+            compare = &gMinCompare;
+        }
     }
 
     switch(ctype)
@@ -93,27 +108,11 @@ OConteiner::OConteiner(int ctype, bool brts,bool endupl ,const Map &map)
         }
         case 3:
         {
-            if(breakingties)
-            {
-                compare = &gMaxComparePQ;
-            }
-            else
-            {
-                compare = &gMinComparePQ;
-            }
             Pq = std::priority_queue<Node, std::vector<Node>, bool(*)(const Node&, const Node&)>(compare);
             break;
         }
         case 4:
         {
-            if(breakingties)
-            {
-                compare = &gMaxComparePQ;
-            }
-            else
-            {
-                compare = &gMinComparePQ;
-            }
             VctPq.resize(map.getMapHeight());
             for(int i = 0; i < VctPq.size(); i++)
             {
@@ -327,7 +326,6 @@ Node OConteiner::GetOptimal()
                 }
 
             }
-
 
             result = VctLst[vlminindex].front();
             VctLst[vlminindex].pop_front();

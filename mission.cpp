@@ -73,7 +73,7 @@ void Mission::createSearch()
 
 void Mission::startSearch()
 {
-    sr = search->startSearch(logger, map, options);
+    sr = search->startSearch(logger, map, options, config.OpenStructure[CN_OS_OT], config.OpenStructure[CN_OS_OD]);
 }
 
 void Mission::printSearchResultsToConsole()

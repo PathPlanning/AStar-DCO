@@ -33,20 +33,3 @@ double Astar::computeHFromCellToCell(int i1, int j1, int i2, int j2, const Envir
     }
 }
 
-/*bool Astar::Acmp(const Node& lhs, const Node& rhs)
-{
-    if(lhs.F != rhs.F)
-    {
-        return lhs.F < rhs.F;
-    }
-    if(lhs.br)
-    {
-        return lhs.g > rhs.g; // g-max
-    }
-    else
-    {
-        return lhs.g < rhs.g; //g-min
-    }
-}
-
-*/

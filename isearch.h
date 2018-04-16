@@ -16,7 +16,7 @@ class ISearch
     public:
         ISearch();
         virtual ~ISearch(void);
-        virtual SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options);
+        virtual SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, const int opentype, const int duplicate);
 
     protected:
         virtual std::list<Node> findSuccessors(Node *curNode, const Map &map, const EnvironmentOptions &options);

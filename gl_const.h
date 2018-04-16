@@ -26,7 +26,9 @@
         #define CNS_TAG_AS          "allowsqueeze"
         #define CNS_TAG_AD          "allowdiagonal"
         #define CNS_TAG_CC          "cutcorners"
-
+    #define CNS_TAG_STR             "openstructure"
+        #define CNS_TAG_OT          "type"
+        #define CNS_TAG_OD          "duplicate"
     #define CNS_TAG_OPT             "options"
         #define CNS_TAG_LOGLVL      "loglevel"
         #define CNS_TAG_LOGPATH     "logpath"
@@ -106,6 +108,26 @@
 
         #define CN_SP_BT_GMIN 0
         #define CN_SP_BT_GMAX 1
+
+    // Open container options
+    #define CN_OS_OT 0
+
+        #define CNS_OS_OT_VL "vectoroflists"
+        #define CNS_OS_OT_LS "list"
+        #define CNS_OS_OT_ST "set"
+        #define CNS_OS_OT_PQ "priorityqueue"
+        #define CNS_OS_OT_VP "vectorofpriorityqueues"
+        #define CNS_OS_OT_VS "vectorofsets"
+
+        #define CN_OS_OT_VL 0
+        #define CN_OS_OT_LS 1
+        #define CN_OS_OT_ST 2
+        #define CN_OS_OT_PQ 3
+        #define CN_OS_OT_VP 4
+        #define CN_OS_OT_VS 5
+
+    #define CN_OS_OD 1
+
 
 
 
