@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.cpp
+OConteiner.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.h
+
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.h
+list
+-
+vector
+-
+set
+-
+queue
+-
+node.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h
+map.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.h
+
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.cpp
 astar.h
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h
@@ -73,9 +91,13 @@ searchresult.h
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/searchresult.h
 environmentoptions.h
 /Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.h
+OConteiner.h
+/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.h
 list
 -
 vector
+-
+set
 -
 math.h
 -

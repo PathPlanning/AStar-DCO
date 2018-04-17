@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.cpp">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.h">
+			<Option target="ASearch"/>
+		</Unit>
 		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.cpp">
 			<Option target="ASearch"/>
 		</Unit>

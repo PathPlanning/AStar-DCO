@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ASearch.dir/jp_search.cpp.o"
   "CMakeFiles/ASearch.dir/theta.cpp.o"
   "CMakeFiles/ASearch.dir/environmentoptions.cpp.o"
+  "CMakeFiles/ASearch.dir/OConteiner.cpp.o"
   "ASearch.pdb"
   "ASearch"
 )
