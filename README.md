@@ -1,18 +1,15 @@
-## Контейнер Open
-`<openstructure>` - тег реализующий изменение параметров контейнера Open  
-### Выбор типа контейнера
-`<type>` - реализует выбор типа контейнера.  
-#### Возможные значения:
-1.  `vectoroflists` - вектор содержащий линейные списки вершин графа
-2.  `list` - линейный список вершин графа
-3.  `set` - множество уникальных по сочетанию параметров F,g,i,j вершин графа.
-4.  `priorityqueue` - очередь с приоритом вершин графа.
-5.  `vectorofpriorityqueues` - вектор содержащий очереди с приоритетом вершин графа.
-6.  `vectorofsets` - вектор множеств уникальных по сочетанию параметров F,g,i,j вершин графа.
-### Дубликаты
-`<duplicate>` - устанавливает возможность добавления дубликатов в Open (*)
-#### Возможные значения:
-- `true (1)` - Open может содержать дубликаты вершин графа с одинаковыми i и j (и разными F или g в случае set и vectorofsets).
-- `false (0)` - Open содержит вершины только с уникальными парами i, j.
+# AStar-DOC
+The basic implementation of A* algorithm with the possibility of using different conteiners for the Open set
+## Description
+The project contains the following sructures:
+1.  vector of lists
+2.  list
+3.  set
+4.  vector of sets 
+5.  priorityqueue
+6.  vector of priorityqueues
 
-(*) - в случае priorityqueue и vectorofpriorityqueues тег игнорируется, ставиться значение true
+There is also a possibility to keep duplicates in structures 1 - 4 
+
+## Build and Launch
+To build the project you can use CMake, CMakeLists file is available in the repo. For more details about building, see Build and Launch section of [AStar-JPS-ThetaStar repository](https://github.com/PathPlanning/AStar-JPS-ThetaStar). To run the compiled file and get a result you need to pass a correct input XML-file as the first (command line) argument. To run test on empty map you need to pass word `fakemap` as second (command line) argument. In this case '<grid>' statement of XML-file will be ignores.
