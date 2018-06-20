@@ -23,7 +23,7 @@ class Mission
 {
     public:
         Mission();
-        Mission (const char* fileName);
+        Mission (const char* fileName, int maptype);
         ~Mission();
 
         bool getMap();
@@ -38,7 +38,8 @@ class Mission
     private:
         const char* getAlgorithmName();
 
-        Map                     map;
+        Map                     *map;
+        int                     maptype;
         Config                  config;
         EnvironmentOptions      options;
         ISearch*                search;

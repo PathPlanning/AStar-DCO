@@ -19,7 +19,7 @@
 
 class Map
 {
-    private:
+    protected:
         int     height, width;
         int     start_i, start_j;
         int     goal_i, goal_j;
@@ -27,15 +27,15 @@ class Map
         int**   Grid;
 
     public:
-        Map();
-        Map(const Map& orig);
-        ~Map();
+         Map();
+         Map(const Map& orig);
+         virtual ~Map();
 
-        bool getMap(const char *FileName);
+        virtual bool getMap(const char *FileName);
         bool CellIsTraversable (int i, int j) const;
         bool CellOnGrid (int i, int j) const;
-        bool CellIsObstacle(int i, int j) const;
-        int  getValue(int i, int j) const;
+        virtual bool CellIsObstacle(int i, int j) const;
+        virtual int  getValue(int i, int j) const;
         int getMapHeight() const;
         int getMapWidth() const;
         double getCellSize() const;

@@ -272,6 +272,10 @@ bool Map::getMap(const char *FileName)
                     return false;
                 }
                 std::string str = element->GetText();
+                if(str == "Empty")
+                {
+
+                }
                 std::vector<std::string> elems;
                 std::stringstream ss(str);
                 std::string item;

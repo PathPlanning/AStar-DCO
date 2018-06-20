@@ -18,7 +18,6 @@ public:
     ~OConteiner(void);
     void Add(Node elem);
     Node GetOptimal();
-    //bool Check(Node elem);
     long int Size() const;
 
 

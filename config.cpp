@@ -353,9 +353,18 @@ bool Config::getConfig(const char *FileName)
         element = structure->FirstChildElement(CNS_TAG_OD);
         if (!element)
         {
-            std::cout << "Warning! No '" << CNS_TAG_OD << "' tag found in XML file." << std::endl;
-            std::cout << "Value of'" << CNS_TAG_OD << "' tag was defined to false." << std::endl;
-            OpenStructure[CN_OS_OD] = 0;
+            if(OpenStructure[CN_OS_OT] == CN_OS_OT_PQ || OpenStructure[CN_OS_OT] == CN_OS_OT_VP)
+            {
+                std::cout << "Warning! No '" << CNS_TAG_OD << "' tag found in XML file." << std::endl;
+                std::cout << "Value of'" << CNS_TAG_OD << "' tag was defined to true." << std::endl;
+                OpenStructure[CN_OS_OD] = 1;
+            }
+            else
+            {
+                std::cout << "Warning! No '" << CNS_TAG_OD << "' tag found in XML file." << std::endl;
+                std::cout << "Value of'" << CNS_TAG_OD << "' tag was defined to false." << std::endl;
+                OpenStructure[CN_OS_OD] = 0;
+            }
         }
         else
         {

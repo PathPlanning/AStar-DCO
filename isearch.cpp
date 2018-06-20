@@ -69,14 +69,13 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
             succ = succs.front();
             succs.pop_front();
             cost = Cost(curr, succ);
-            if (succ.g > curr.g + cost)
-            {
+
                 succ.g = curr.g + cost;
                 succ.H = computeHFromCellToCell(succ.i, succ.j, goal.i, goal.j, options);
                 succ.F = succ.g + hweight * succ.H;
                 succ.parent = &Close.at(curr.i * width + curr.j);
                 Open.Add(succ);
-            }
+
         }
     }
     while (Open.Size());

@@ -5,19 +5,25 @@
 #include "xmllogger.h"
 #include "gl_const.h"
 #include <iostream>
+#include "FakeMap.h"
 
 Mission::Mission()
 {
     logger = nullptr;
     search = nullptr;
     fileName = nullptr;
+    map = nullptr;
+    maptype = 0;
+
 }
 
-Mission::Mission(const char *FileName)
+Mission::Mission(const char *FileName, int maptype)
 {
     fileName = FileName;
     logger = nullptr;
     search = nullptr;
+    map = nullptr;
+    this->maptype = maptype;
 }
 
 Mission::~Mission()
@@ -26,11 +32,21 @@ Mission::~Mission()
         delete logger;
     if (search)
         delete search;
+    if(map)
+        delete map;
 }
 
 bool Mission::getMap()
 {
-    return map.getMap(fileName);
+    if(maptype == 0)
+    {
+        map = new Map();
+    }
+    else if(maptype == 1)
+    {
+        map = new FakeMap();
+    }
+    return map->getMap(fileName);
 }
 
 bool Mission::getConfig()
@@ -73,7 +89,7 @@ void Mission::createSearch()
 
 void Mission::startSearch()
 {
-    sr = search->startSearch(logger, map, options, config.OpenStructure[CN_OS_OT], config.OpenStructure[CN_OS_OD]);
+    sr = search->startSearch(logger, *map, options, config.OpenStructure[CN_OS_OT], config.OpenStructure[CN_OS_OD]);
 }
 
 void Mission::printSearchResultsToConsole()
@@ -86,18 +102,18 @@ void Mission::printSearchResultsToConsole()
     std::cout << "nodescreated=" << sr.nodescreated << std::endl;
     if (sr.pathfound) {
         std::cout << "pathlength=" << sr.pathlength << std::endl;
-        std::cout << "pathlength_scaled=" << sr.pathlength * map.getCellSize() << std::endl;
+        std::cout << "pathlength_scaled=" << sr.pathlength * map->getCellSize() << std::endl;
     }
     std::cout << "time=" << sr.time << std::endl;
 }
 
 void Mission::saveSearchResultsToLog()
 {
-    logger->writeToLogSummary(sr.numberofsteps, sr.nodescreated, sr.pathlength, sr.time, map.getCellSize());
+    logger->writeToLogSummary(sr.numberofsteps, sr.nodescreated, sr.pathlength, sr.time, map->getCellSize());
     if (sr.pathfound) {
         logger->writeToLogPath(*sr.lppath);
         logger->writeToLogHPpath(*sr.hppath);
-        logger->writeToLogMap(map, *sr.lppath);
+        logger->writeToLogMap(*map, *sr.lppath);
     } else
         logger->writeToLogNotFound();
     logger->saveLog();

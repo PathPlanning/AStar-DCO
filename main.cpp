@@ -2,13 +2,22 @@
 
 int main(int argc, char* argv[])
 {
+    int maptype = 0;
     if(argc < 2)
     {
         std::cout<<"Error! Pathfinding task file (XML) is not specified!"<<std::endl;
         return 0;
     }
+    else if(argc > 2)
+    {
+        if(std::string(argv[2]) == "fakemap")
+        {
+            maptype = 1;
+        }
+    }
 
-    Mission mission(argv[1]);
+
+    Mission mission(argv[1], maptype);
     std::cout<<argv[1]<<std::endl;
     std::cout<<"Parsing the map from XML:"<<std::endl;
 
