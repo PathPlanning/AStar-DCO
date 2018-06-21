@@ -54,7 +54,7 @@ Input file should contain:
 The main tag in Output file, which containes path length, memory and time:
 
 ```xml
-<summary numberofsteps="107" nodescreated="127" length="15.414213" length_scaled="41.618375587463383" time="0.000512" astar_length="15.414213" astar_correct="1"/>
+<summary numberofsteps="107" nodescreated="127" length="15.414213" length_scaled="41.618375587463383" time="0.000512"/>
 ```
 
 * _"numberofsteps"_ stands for the number of iterations (number of expanded vertices)
