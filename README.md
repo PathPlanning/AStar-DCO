@@ -1,13 +1,13 @@
 # AStar-DCO
 
-The basic implementation of A* algorithm with the possibility of using different conteiners for the Open set
+The basic implementation of A* algorithm with the possibility of using different containers for the Open set
 
 ## Description
 
 The project contains implementations of following sructures:
 
 1. List - container that represents a countable number of ordered elements. Implemented using `std::list`
-2. Array of lists - array that conteines a number of lists. Implemented using `std::vector<std::list>`
+2. Array of lists - array that containes a number of lists. Implemented using `std::vector<std::list>`
 3. Set - container that represents a countable number of unordered elements without repeating the equivalent elements. Implemented using `std::set`
 4. Array of sets - the same as array of lists, but with sets. Implemented using `std::vector<std::set>`
 5. Priority queue - container that represents regular queue, but every element has a "priority" that makes it quicker to choose the most suitable element. Implemented using `std::priority_queue`
@@ -39,8 +39,8 @@ Input file should contain:
     * `<allowdiagonal>` - boolean tag that defines the possibility to make diagonal moves. Setting it to "false" restricts agent to make cardinal (horizonal, vertical) moves only. Default value is "true".
     * `<cutcorners>` - boolean tag that defines the possibilty to make diagonal moves when one adjacent cell is untraversable. The tag is ignored if diagonal moves are not allowed. Default value is "false".
     * `<allowsqueeze>` - boolean tag that defines the possibility to make diagonal moves when both adjacent cells are untraversable. The tag is ignored if cutting corners is not allowed. Default value is "false".
-* Optional tag `<openstructure>`. It describe the conteiner of Open set.
-    * `<type>` -  defines the type of conteiner. Possible values - "list", "vectoroflists", "set",  "vectorofsets", "priorityqueue", "vectorofpriorityqueues". Default value is "vectoroflists".
+* Optional tag `<openstructure>`. It describe the container of Open set.
+    * `<type>` -  defines the type of container. Possible values - "list", "vectoroflists", "set",  "vectorofsets", "priorityqueue", "vectorofpriorityqueues". Default value is "vectoroflists".
     * `<duplicate>` - boolean tag that defines the availability of duplicates in Open. Defult value is "true".
 * Optional tag `<options>`. Options that are not related to search.
 
@@ -62,4 +62,3 @@ The main tag in Output file, which containes path length, memory and time:
 * _"length"_ stands for length of the final path
 * _"length_scaled"_ stands for actual length counting the size of cell in map
 * _"time"_ stands for elapsed time
-* _"astar_length"_ and _"astar_correct"_ stand for checking the algorithm with A\* (_"astar_correct"_ equals 1, if _"astar_length"_ equals to _"length"_, and 0 - otherwise).
