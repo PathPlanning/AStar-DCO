@@ -25,7 +25,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
 {
     dupl = duplicate;
     contType = opentype;
-    Open = OConteiner(contType, breakingties, dupl, map);
+    Open = new OList(this->breakingties);
     width = map.getMapWidth();
     goal.i = map.getFinishI();
     goal.j = map.getFinishJ();
@@ -43,13 +43,13 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     auto startpnt = std::chrono::high_resolution_clock::now();
     start.H = computeHFromCellToCell(start.i, start.j, goal.i, goal.j, options);
     start.F = start.g + hweight * start.H;
-    Open.Add(start);
-
+    Open->Add(start);
+    std::cout<<Open->Size()<<"\n";
     do
     {
         do
         {
-            curr = Open.GetOptimal();
+            curr = Open->GetOptimal();
         }
         while(dupl && isClosed(curr.i, curr.j));
 
@@ -74,11 +74,11 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
                 succ.H = computeHFromCellToCell(succ.i, succ.j, goal.i, goal.j, options);
                 succ.F = succ.g + hweight * succ.H;
                 succ.parent = &Close.at(curr.i * width + curr.j);
-                Open.Add(succ);
+                Open->Add(succ);
 
         }
     }
-    while (Open.Size());
+    while (Open->Size());
 
     if (!isClosed(goal.i, goal.j))
     {
@@ -113,7 +113,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
         sresult.pathlength = (float) sum;
         sresult.numberofsteps = step;
         sresult.time = ((double) res) / 1000;
-        sresult.nodescreated = (unsigned int) (Open.Size() + Close.size());
+        sresult.nodescreated = (unsigned int) (Open->Size() + Close.size());
 
     }
     return sresult;

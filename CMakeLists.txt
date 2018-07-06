@@ -29,6 +29,6 @@ set(SOURCE_FILES
         jp_search.h
         theta.h
         environmentoptions.h
-        OConteiner.cpp OConteiner.h FakeMap.cpp FakeMap.h)
+        OConteiner.cpp OConteiner.h FakeMap.cpp FakeMap.h IOpenContainer.cpp IOpenContainer.h OList.cpp OList.h)
 add_executable(ASearch ${SOURCE_FILES})
 

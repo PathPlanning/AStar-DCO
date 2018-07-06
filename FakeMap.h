@@ -11,7 +11,7 @@
 class FakeMap : public Map
 {
     public:
-        FakeMap()  ;
+        FakeMap();
         ~FakeMap() override ;
 
         bool getMap(const char *FileName) override ;

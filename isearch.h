@@ -4,6 +4,8 @@
 #include "searchresult.h"
 #include "environmentoptions.h"
 #include "OConteiner.h"
+#include "IOpenContainer.h"
+#include "OList.h"
 #include <list>
 #include <vector>
 #include <set>
@@ -31,7 +33,7 @@ class ISearch
         bool breakingties;
 
         std::unordered_map <int, Node> Close;
-        OConteiner Open;
+        IOpenContainer *Open;
         Node goal;
         Node start;
         int width;
