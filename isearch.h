@@ -3,9 +3,13 @@
 #include "ilogger.h"
 #include "searchresult.h"
 #include "environmentoptions.h"
-#include "OConteiner.h"
 #include "IOpenContainer.h"
+#include "OVctList.h"
 #include "OList.h"
+#include "OSet.h"
+#include "OPriorityQueue.h"
+#include "OVctSet.h"
+#include "OVctProirityQueue.h"
 #include <list>
 #include <vector>
 #include <set>
@@ -18,7 +22,8 @@ class ISearch
     public:
         ISearch();
         virtual ~ISearch(void);
-        virtual SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, const int opentype, const int duplicate);
+        void CreateOpen(int type, bool allowduplicates, const Map &map);
+        virtual SearchResult startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options);
 
     protected:
         virtual std::list<Node> findSuccessors(Node *curNode, const Map &map, const EnvironmentOptions &options);
@@ -37,7 +42,6 @@ class ISearch
         Node goal;
         Node start;
         int width;
-        int contType;
         bool dupl;
 };
 #endif

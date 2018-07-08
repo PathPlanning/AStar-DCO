@@ -1,7 +1,6 @@
 #include "mission.h"
 #include "astar.h"
 #include "dijkstra.h"
-#include "theta.h"
 #include "xmllogger.h"
 #include "gl_const.h"
 #include <iostream>
@@ -74,22 +73,24 @@ void Mission::createEnvironmentOptions()
 void Mission::createSearch()
 {
     if (search)
+    {
         delete search;
-//    if (config.SearchParams[CN_SP_ST] == CN_SP_ST_BFS)
-//        search = new BFS();
+    }
     else if (config.SearchParams[CN_SP_ST] == CN_SP_ST_DIJK)
+    {
         search = new Dijkstra();
+    }
     else if (config.SearchParams[CN_SP_ST] == CN_SP_ST_ASTAR)
+    {
         search = new Astar(config.SearchParams[CN_SP_HW], config.SearchParams[CN_SP_BT]);
-    else if (config.SearchParams[CN_SP_ST] == CN_SP_ST_JP_SEARCH)
-        search = new JP_Search(config.SearchParams[CN_SP_HW], config.SearchParams[CN_SP_BT]);
-    else if (config.SearchParams[CN_SP_ST] == CN_SP_ST_TH)
-        search = new Theta(config.SearchParams[CN_SP_HW], config.SearchParams[CN_SP_BT]);
+    }
+
+    search->CreateOpen(config.OpenStructure[CN_OS_OT], config.OpenStructure[CN_OS_OD], *map);
 }
 
 void Mission::startSearch()
 {
-    sr = search->startSearch(logger, *map, options, config.OpenStructure[CN_OS_OT], config.OpenStructure[CN_OS_OD]);
+    sr = search->startSearch(logger, *map, options);
 }
 
 void Mission::printSearchResultsToConsole()

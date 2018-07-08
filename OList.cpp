@@ -3,39 +3,24 @@
 //
 
 #include "OList.h"
-bool gMaxCompare1(const Node &lhs, const Node &rhs)
-{
-    if (lhs.F == rhs.F)
-    {
-        if (lhs.g == rhs.g)
-        {
-            return lhs.i < rhs.i || lhs.i == rhs.i && lhs.j < rhs.j;
-        }
-        else
-        {
-            return lhs.g > rhs.g;
-        }
-    }
-    return lhs.F < rhs.F;
-}
 
 OList::OList() : IOpenContainer()
 {
     Lst = std::list <Node>();
-    dupl = 0;
+    dupl = false;
 }
 
-OList::OList(bool breakingties) : IOpenContainer(breakingties)
+OList::OList(bool breakingties, bool allowduplicates) : IOpenContainer(breakingties)
 {
     Lst = std::list <Node>();
-    dupl = 0;
+    dupl = allowduplicates;
     if(this->breakingties)
     {
-        this->compare = &gMaxCompare1;
+        this->compare = &gMaxCompare;
     }
     else
     {
-        this->compare = gMaxCompare1;
+        this->compare = &gMinCompare;
     }
 }
 
@@ -47,7 +32,7 @@ OList::OList(OList const &a) : IOpenContainer(a)
 
 OList::~OList()
 {
-
+    Lst.clear();
 }
 
 void OList::Add(Node elem)

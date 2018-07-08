@@ -7,6 +7,8 @@
 IOpenContainer::IOpenContainer()
 {
     size = 0;
+    breakingties = 1;
+    compare = NULL;
 }
 
 IOpenContainer::IOpenContainer(bool breakingties)

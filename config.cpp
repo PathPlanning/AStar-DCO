@@ -300,7 +300,7 @@ bool Config::getConfig(const char *FileName)
     {
         std::cout << "Error! No '" << CNS_TAG_STR << "' tag found in XML file!" << std::endl;
         OpenStructure[CN_OS_OT] = 0;
-        OpenStructure[CN_OS_OD] = 0;
+        OpenStructure[CN_OS_OD] = 1;
     }
     else
     {
@@ -385,8 +385,8 @@ bool Config::getConfig(const char *FileName)
             else if (check != "1" && check != "true" && check != "0" && check != "false")
             {
                 std::cout << "Warning! Value of '" << CNS_TAG_OD << "' is not correctly specified." << std::endl;
-                std::cout << "Value of '" << CNS_TAG_OD << "' was defined to default - false." << std::endl;
-                OpenStructure[CN_OS_OD] = 0;
+                std::cout << "Value of '" << CNS_TAG_OD << "' was defined to default - true." << std::endl;
+                OpenStructure[CN_OS_OD] = 1;
             }
             else
             {

@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug"/>
+				<Option working_dir="/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug"/>
+				<Option working_dir="/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug"/>
+				<Option working_dir="/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ASearch">
-				<Option output="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/ASearch" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug"/>
+				<Option output="/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/ASearch" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -53,15 +53,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ASearch"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ASearch"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ASearch/fast">
-				<Option output="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/ASearch" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug"/>
+				<Option output="/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/ASearch" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="clang"/>
@@ -75,101 +75,134 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ASearch/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/МИЭМ/2\ КУРС/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 ASearch/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/Compare.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/FakeMap.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/FakeMap.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/IOpenContainer.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/IOpenContainer.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OList.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OList.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OPriorityQueue.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OPriorityQueue.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OSet.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/gl_const.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OSet.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/ilogger.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OVctList.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OVctList.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OVctProirityQueue.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OVctProirityQueue.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OVctSet.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/main.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/OVctSet.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/astar.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/astar.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/config.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/config.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/node.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/dijkstra.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/searchresult.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/dijkstra.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/environmentoptions.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/environmentoptions.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/gl_const.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/ilogger.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.cpp">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/isearch.cpp">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.h">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/isearch.h">
 			<Option target="ASearch"/>
 		</Unit>
-		<Unit filename="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/CMakeLists.txt">
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/main.cpp">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/map.cpp">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/map.h">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/mission.cpp">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/mission.h">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/node.h">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/searchresult.h">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/tinyxml2.cpp">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/tinyxml2.h">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/xmllogger.cpp">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/xmllogger.h">
+			<Option target="ASearch"/>
+		</Unit>
+		<Unit filename="/Users/macbook/Documents/OneDrive/AI/PathSearch/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -12,7 +12,7 @@ class IOpenContainer
 {
     public:
         IOpenContainer();
-        IOpenContainer(bool breakingties);
+        explicit IOpenContainer(bool breakingties);
         IOpenContainer(IOpenContainer const &a);
         virtual ~IOpenContainer(void);
         virtual void Add(Node elem) = 0;

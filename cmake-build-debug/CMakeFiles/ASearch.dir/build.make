@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch"
+CMAKE_SOURCE_DIR = /Users/macbook/Documents/OneDrive/AI/PathSearch
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ASearch.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/ASearch.dir/flags.make
 
 CMakeFiles/ASearch.dir/tinyxml2.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/tinyxml2.cpp.o: ../tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ASearch.dir/tinyxml2.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/tinyxml2.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ASearch.dir/tinyxml2.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/tinyxml2.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/tinyxml2.cpp
 
 CMakeFiles/ASearch.dir/tinyxml2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/tinyxml2.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.cpp" > CMakeFiles/ASearch.dir/tinyxml2.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/tinyxml2.cpp > CMakeFiles/ASearch.dir/tinyxml2.cpp.i
 
 CMakeFiles/ASearch.dir/tinyxml2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/tinyxml2.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/tinyxml2.cpp" -o CMakeFiles/ASearch.dir/tinyxml2.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/tinyxml2.cpp -o CMakeFiles/ASearch.dir/tinyxml2.cpp.s
 
 CMakeFiles/ASearch.dir/tinyxml2.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/ASearch.dir/tinyxml2.cpp.o.provides.build: CMakeFiles/ASearch.dir/tin
 
 CMakeFiles/ASearch.dir/xmllogger.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/xmllogger.cpp.o: ../xmllogger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ASearch.dir/xmllogger.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/xmllogger.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ASearch.dir/xmllogger.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/xmllogger.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/xmllogger.cpp
 
 CMakeFiles/ASearch.dir/xmllogger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/xmllogger.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.cpp" > CMakeFiles/ASearch.dir/xmllogger.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/xmllogger.cpp > CMakeFiles/ASearch.dir/xmllogger.cpp.i
 
 CMakeFiles/ASearch.dir/xmllogger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/xmllogger.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/xmllogger.cpp" -o CMakeFiles/ASearch.dir/xmllogger.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/xmllogger.cpp -o CMakeFiles/ASearch.dir/xmllogger.cpp.s
 
 CMakeFiles/ASearch.dir/xmllogger.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/ASearch.dir/xmllogger.cpp.o.provides.build: CMakeFiles/ASearch.dir/xm
 
 CMakeFiles/ASearch.dir/isearch.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/isearch.cpp.o: ../isearch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ASearch.dir/isearch.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/isearch.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ASearch.dir/isearch.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/isearch.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/isearch.cpp
 
 CMakeFiles/ASearch.dir/isearch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/isearch.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.cpp" > CMakeFiles/ASearch.dir/isearch.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/isearch.cpp > CMakeFiles/ASearch.dir/isearch.cpp.i
 
 CMakeFiles/ASearch.dir/isearch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/isearch.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/isearch.cpp" -o CMakeFiles/ASearch.dir/isearch.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/isearch.cpp -o CMakeFiles/ASearch.dir/isearch.cpp.s
 
 CMakeFiles/ASearch.dir/isearch.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/ASearch.dir/isearch.cpp.o.provides.build: CMakeFiles/ASearch.dir/isea
 
 CMakeFiles/ASearch.dir/mission.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/mission.cpp.o: ../mission.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ASearch.dir/mission.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/mission.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ASearch.dir/mission.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/mission.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/mission.cpp
 
 CMakeFiles/ASearch.dir/mission.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/mission.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.cpp" > CMakeFiles/ASearch.dir/mission.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/mission.cpp > CMakeFiles/ASearch.dir/mission.cpp.i
 
 CMakeFiles/ASearch.dir/mission.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/mission.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/mission.cpp" -o CMakeFiles/ASearch.dir/mission.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/mission.cpp -o CMakeFiles/ASearch.dir/mission.cpp.s
 
 CMakeFiles/ASearch.dir/mission.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/ASearch.dir/mission.cpp.o.provides.build: CMakeFiles/ASearch.dir/miss
 
 CMakeFiles/ASearch.dir/map.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/map.cpp.o: ../map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ASearch.dir/map.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/map.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ASearch.dir/map.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/map.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/map.cpp
 
 CMakeFiles/ASearch.dir/map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/map.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.cpp" > CMakeFiles/ASearch.dir/map.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/map.cpp > CMakeFiles/ASearch.dir/map.cpp.i
 
 CMakeFiles/ASearch.dir/map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/map.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/map.cpp" -o CMakeFiles/ASearch.dir/map.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/map.cpp -o CMakeFiles/ASearch.dir/map.cpp.s
 
 CMakeFiles/ASearch.dir/map.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/ASearch.dir/map.cpp.o.provides.build: CMakeFiles/ASearch.dir/map.cpp.
 
 CMakeFiles/ASearch.dir/dijkstra.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/dijkstra.cpp.o: ../dijkstra.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ASearch.dir/dijkstra.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/dijkstra.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ASearch.dir/dijkstra.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/dijkstra.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/dijkstra.cpp
 
 CMakeFiles/ASearch.dir/dijkstra.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/dijkstra.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.cpp" > CMakeFiles/ASearch.dir/dijkstra.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/dijkstra.cpp > CMakeFiles/ASearch.dir/dijkstra.cpp.i
 
 CMakeFiles/ASearch.dir/dijkstra.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/dijkstra.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/dijkstra.cpp" -o CMakeFiles/ASearch.dir/dijkstra.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/dijkstra.cpp -o CMakeFiles/ASearch.dir/dijkstra.cpp.s
 
 CMakeFiles/ASearch.dir/dijkstra.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/ASearch.dir/dijkstra.cpp.o.provides.build: CMakeFiles/ASearch.dir/dij
 
 CMakeFiles/ASearch.dir/config.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/config.cpp.o: ../config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ASearch.dir/config.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/config.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ASearch.dir/config.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/config.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/config.cpp
 
 CMakeFiles/ASearch.dir/config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/config.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.cpp" > CMakeFiles/ASearch.dir/config.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/config.cpp > CMakeFiles/ASearch.dir/config.cpp.i
 
 CMakeFiles/ASearch.dir/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/config.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/config.cpp" -o CMakeFiles/ASearch.dir/config.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/config.cpp -o CMakeFiles/ASearch.dir/config.cpp.s
 
 CMakeFiles/ASearch.dir/config.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/ASearch.dir/config.cpp.o.provides.build: CMakeFiles/ASearch.dir/confi
 
 CMakeFiles/ASearch.dir/astar.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/astar.cpp.o: ../astar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ASearch.dir/astar.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/astar.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/ASearch.dir/astar.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/astar.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/astar.cpp
 
 CMakeFiles/ASearch.dir/astar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/astar.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.cpp" > CMakeFiles/ASearch.dir/astar.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/astar.cpp > CMakeFiles/ASearch.dir/astar.cpp.i
 
 CMakeFiles/ASearch.dir/astar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/astar.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/astar.cpp" -o CMakeFiles/ASearch.dir/astar.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/astar.cpp -o CMakeFiles/ASearch.dir/astar.cpp.s
 
 CMakeFiles/ASearch.dir/astar.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/ASearch.dir/astar.cpp.o.provides.build: CMakeFiles/ASearch.dir/astar.
 
 CMakeFiles/ASearch.dir/main.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ASearch.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/main.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/ASearch.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/main.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/main.cpp
 
 CMakeFiles/ASearch.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/main.cpp" > CMakeFiles/ASearch.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/main.cpp > CMakeFiles/ASearch.dir/main.cpp.i
 
 CMakeFiles/ASearch.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/main.cpp" -o CMakeFiles/ASearch.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/main.cpp -o CMakeFiles/ASearch.dir/main.cpp.s
 
 CMakeFiles/ASearch.dir/main.cpp.o.requires:
 
@@ -273,66 +273,18 @@ CMakeFiles/ASearch.dir/main.cpp.o.provides: CMakeFiles/ASearch.dir/main.cpp.o.re
 CMakeFiles/ASearch.dir/main.cpp.o.provides.build: CMakeFiles/ASearch.dir/main.cpp.o
 
 
-CMakeFiles/ASearch.dir/jp_search.cpp.o: CMakeFiles/ASearch.dir/flags.make
-CMakeFiles/ASearch.dir/jp_search.cpp.o: ../jp_search.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ASearch.dir/jp_search.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/jp_search.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.cpp"
-
-CMakeFiles/ASearch.dir/jp_search.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/jp_search.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.cpp" > CMakeFiles/ASearch.dir/jp_search.cpp.i
-
-CMakeFiles/ASearch.dir/jp_search.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/jp_search.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/jp_search.cpp" -o CMakeFiles/ASearch.dir/jp_search.cpp.s
-
-CMakeFiles/ASearch.dir/jp_search.cpp.o.requires:
-
-.PHONY : CMakeFiles/ASearch.dir/jp_search.cpp.o.requires
-
-CMakeFiles/ASearch.dir/jp_search.cpp.o.provides: CMakeFiles/ASearch.dir/jp_search.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/jp_search.cpp.o.provides.build
-.PHONY : CMakeFiles/ASearch.dir/jp_search.cpp.o.provides
-
-CMakeFiles/ASearch.dir/jp_search.cpp.o.provides.build: CMakeFiles/ASearch.dir/jp_search.cpp.o
-
-
-CMakeFiles/ASearch.dir/theta.cpp.o: CMakeFiles/ASearch.dir/flags.make
-CMakeFiles/ASearch.dir/theta.cpp.o: ../theta.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ASearch.dir/theta.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/theta.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.cpp"
-
-CMakeFiles/ASearch.dir/theta.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/theta.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.cpp" > CMakeFiles/ASearch.dir/theta.cpp.i
-
-CMakeFiles/ASearch.dir/theta.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/theta.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/theta.cpp" -o CMakeFiles/ASearch.dir/theta.cpp.s
-
-CMakeFiles/ASearch.dir/theta.cpp.o.requires:
-
-.PHONY : CMakeFiles/ASearch.dir/theta.cpp.o.requires
-
-CMakeFiles/ASearch.dir/theta.cpp.o.provides: CMakeFiles/ASearch.dir/theta.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/theta.cpp.o.provides.build
-.PHONY : CMakeFiles/ASearch.dir/theta.cpp.o.provides
-
-CMakeFiles/ASearch.dir/theta.cpp.o.provides.build: CMakeFiles/ASearch.dir/theta.cpp.o
-
-
 CMakeFiles/ASearch.dir/environmentoptions.cpp.o: CMakeFiles/ASearch.dir/flags.make
 CMakeFiles/ASearch.dir/environmentoptions.cpp.o: ../environmentoptions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ASearch.dir/environmentoptions.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/environmentoptions.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/ASearch.dir/environmentoptions.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/environmentoptions.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/environmentoptions.cpp
 
 CMakeFiles/ASearch.dir/environmentoptions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/environmentoptions.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.cpp" > CMakeFiles/ASearch.dir/environmentoptions.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/environmentoptions.cpp > CMakeFiles/ASearch.dir/environmentoptions.cpp.i
 
 CMakeFiles/ASearch.dir/environmentoptions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/environmentoptions.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/environmentoptions.cpp" -o CMakeFiles/ASearch.dir/environmentoptions.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/environmentoptions.cpp -o CMakeFiles/ASearch.dir/environmentoptions.cpp.s
 
 CMakeFiles/ASearch.dir/environmentoptions.cpp.o.requires:
 
@@ -345,28 +297,196 @@ CMakeFiles/ASearch.dir/environmentoptions.cpp.o.provides: CMakeFiles/ASearch.dir
 CMakeFiles/ASearch.dir/environmentoptions.cpp.o.provides.build: CMakeFiles/ASearch.dir/environmentoptions.cpp.o
 
 
-CMakeFiles/ASearch.dir/OConteiner.cpp.o: CMakeFiles/ASearch.dir/flags.make
-CMakeFiles/ASearch.dir/OConteiner.cpp.o: ../OConteiner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ASearch.dir/OConteiner.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/OConteiner.cpp.o -c "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.cpp"
+CMakeFiles/ASearch.dir/FakeMap.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/FakeMap.cpp.o: ../FakeMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/ASearch.dir/FakeMap.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/FakeMap.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/FakeMap.cpp
 
-CMakeFiles/ASearch.dir/OConteiner.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/OConteiner.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.cpp" > CMakeFiles/ASearch.dir/OConteiner.cpp.i
+CMakeFiles/ASearch.dir/FakeMap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/FakeMap.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/FakeMap.cpp > CMakeFiles/ASearch.dir/FakeMap.cpp.i
 
-CMakeFiles/ASearch.dir/OConteiner.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/OConteiner.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/OConteiner.cpp" -o CMakeFiles/ASearch.dir/OConteiner.cpp.s
+CMakeFiles/ASearch.dir/FakeMap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/FakeMap.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/FakeMap.cpp -o CMakeFiles/ASearch.dir/FakeMap.cpp.s
 
-CMakeFiles/ASearch.dir/OConteiner.cpp.o.requires:
+CMakeFiles/ASearch.dir/FakeMap.cpp.o.requires:
 
-.PHONY : CMakeFiles/ASearch.dir/OConteiner.cpp.o.requires
+.PHONY : CMakeFiles/ASearch.dir/FakeMap.cpp.o.requires
 
-CMakeFiles/ASearch.dir/OConteiner.cpp.o.provides: CMakeFiles/ASearch.dir/OConteiner.cpp.o.requires
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OConteiner.cpp.o.provides.build
-.PHONY : CMakeFiles/ASearch.dir/OConteiner.cpp.o.provides
+CMakeFiles/ASearch.dir/FakeMap.cpp.o.provides: CMakeFiles/ASearch.dir/FakeMap.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/FakeMap.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/FakeMap.cpp.o.provides
 
-CMakeFiles/ASearch.dir/OConteiner.cpp.o.provides.build: CMakeFiles/ASearch.dir/OConteiner.cpp.o
+CMakeFiles/ASearch.dir/FakeMap.cpp.o.provides.build: CMakeFiles/ASearch.dir/FakeMap.cpp.o
+
+
+CMakeFiles/ASearch.dir/IOpenContainer.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/IOpenContainer.cpp.o: ../IOpenContainer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/ASearch.dir/IOpenContainer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/IOpenContainer.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/IOpenContainer.cpp
+
+CMakeFiles/ASearch.dir/IOpenContainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/IOpenContainer.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/IOpenContainer.cpp > CMakeFiles/ASearch.dir/IOpenContainer.cpp.i
+
+CMakeFiles/ASearch.dir/IOpenContainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/IOpenContainer.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/IOpenContainer.cpp -o CMakeFiles/ASearch.dir/IOpenContainer.cpp.s
+
+CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.requires:
+
+.PHONY : CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.requires
+
+CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.provides: CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.provides
+
+CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.provides.build: CMakeFiles/ASearch.dir/IOpenContainer.cpp.o
+
+
+CMakeFiles/ASearch.dir/OList.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/OList.cpp.o: ../OList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/ASearch.dir/OList.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/OList.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/OList.cpp
+
+CMakeFiles/ASearch.dir/OList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/OList.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/OList.cpp > CMakeFiles/ASearch.dir/OList.cpp.i
+
+CMakeFiles/ASearch.dir/OList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/OList.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/OList.cpp -o CMakeFiles/ASearch.dir/OList.cpp.s
+
+CMakeFiles/ASearch.dir/OList.cpp.o.requires:
+
+.PHONY : CMakeFiles/ASearch.dir/OList.cpp.o.requires
+
+CMakeFiles/ASearch.dir/OList.cpp.o.provides: CMakeFiles/ASearch.dir/OList.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OList.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/OList.cpp.o.provides
+
+CMakeFiles/ASearch.dir/OList.cpp.o.provides.build: CMakeFiles/ASearch.dir/OList.cpp.o
+
+
+CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o: ../OPriorityQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/OPriorityQueue.cpp
+
+CMakeFiles/ASearch.dir/OPriorityQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/OPriorityQueue.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/OPriorityQueue.cpp > CMakeFiles/ASearch.dir/OPriorityQueue.cpp.i
+
+CMakeFiles/ASearch.dir/OPriorityQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/OPriorityQueue.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/OPriorityQueue.cpp -o CMakeFiles/ASearch.dir/OPriorityQueue.cpp.s
+
+CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.requires:
+
+.PHONY : CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.requires
+
+CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.provides: CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.provides
+
+CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.provides.build: CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o
+
+
+CMakeFiles/ASearch.dir/OSet.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/OSet.cpp.o: ../OSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/ASearch.dir/OSet.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/OSet.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/OSet.cpp
+
+CMakeFiles/ASearch.dir/OSet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/OSet.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/OSet.cpp > CMakeFiles/ASearch.dir/OSet.cpp.i
+
+CMakeFiles/ASearch.dir/OSet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/OSet.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/OSet.cpp -o CMakeFiles/ASearch.dir/OSet.cpp.s
+
+CMakeFiles/ASearch.dir/OSet.cpp.o.requires:
+
+.PHONY : CMakeFiles/ASearch.dir/OSet.cpp.o.requires
+
+CMakeFiles/ASearch.dir/OSet.cpp.o.provides: CMakeFiles/ASearch.dir/OSet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OSet.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/OSet.cpp.o.provides
+
+CMakeFiles/ASearch.dir/OSet.cpp.o.provides.build: CMakeFiles/ASearch.dir/OSet.cpp.o
+
+
+CMakeFiles/ASearch.dir/OVctList.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/OVctList.cpp.o: ../OVctList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/ASearch.dir/OVctList.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/OVctList.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctList.cpp
+
+CMakeFiles/ASearch.dir/OVctList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/OVctList.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctList.cpp > CMakeFiles/ASearch.dir/OVctList.cpp.i
+
+CMakeFiles/ASearch.dir/OVctList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/OVctList.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctList.cpp -o CMakeFiles/ASearch.dir/OVctList.cpp.s
+
+CMakeFiles/ASearch.dir/OVctList.cpp.o.requires:
+
+.PHONY : CMakeFiles/ASearch.dir/OVctList.cpp.o.requires
+
+CMakeFiles/ASearch.dir/OVctList.cpp.o.provides: CMakeFiles/ASearch.dir/OVctList.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctList.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/OVctList.cpp.o.provides
+
+CMakeFiles/ASearch.dir/OVctList.cpp.o.provides.build: CMakeFiles/ASearch.dir/OVctList.cpp.o
+
+
+CMakeFiles/ASearch.dir/OVctSet.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/OVctSet.cpp.o: ../OVctSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/ASearch.dir/OVctSet.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/OVctSet.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctSet.cpp
+
+CMakeFiles/ASearch.dir/OVctSet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/OVctSet.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctSet.cpp > CMakeFiles/ASearch.dir/OVctSet.cpp.i
+
+CMakeFiles/ASearch.dir/OVctSet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/OVctSet.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctSet.cpp -o CMakeFiles/ASearch.dir/OVctSet.cpp.s
+
+CMakeFiles/ASearch.dir/OVctSet.cpp.o.requires:
+
+.PHONY : CMakeFiles/ASearch.dir/OVctSet.cpp.o.requires
+
+CMakeFiles/ASearch.dir/OVctSet.cpp.o.provides: CMakeFiles/ASearch.dir/OVctSet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctSet.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/OVctSet.cpp.o.provides
+
+CMakeFiles/ASearch.dir/OVctSet.cpp.o.provides.build: CMakeFiles/ASearch.dir/OVctSet.cpp.o
+
+
+CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o: CMakeFiles/ASearch.dir/flags.make
+CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o: ../OVctProirityQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o -c /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctProirityQueue.cpp
+
+CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctProirityQueue.cpp > CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.i
+
+CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/macbook/Documents/OneDrive/AI/PathSearch/OVctProirityQueue.cpp -o CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.s
+
+CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.requires:
+
+.PHONY : CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.requires
+
+CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.provides: CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.requires
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.provides.build
+.PHONY : CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.provides
+
+CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.provides.build: CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o
 
 
 # Object files for target ASearch
@@ -380,10 +500,15 @@ ASearch_OBJECTS = \
 "CMakeFiles/ASearch.dir/config.cpp.o" \
 "CMakeFiles/ASearch.dir/astar.cpp.o" \
 "CMakeFiles/ASearch.dir/main.cpp.o" \
-"CMakeFiles/ASearch.dir/jp_search.cpp.o" \
-"CMakeFiles/ASearch.dir/theta.cpp.o" \
 "CMakeFiles/ASearch.dir/environmentoptions.cpp.o" \
-"CMakeFiles/ASearch.dir/OConteiner.cpp.o"
+"CMakeFiles/ASearch.dir/FakeMap.cpp.o" \
+"CMakeFiles/ASearch.dir/IOpenContainer.cpp.o" \
+"CMakeFiles/ASearch.dir/OList.cpp.o" \
+"CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o" \
+"CMakeFiles/ASearch.dir/OSet.cpp.o" \
+"CMakeFiles/ASearch.dir/OVctList.cpp.o" \
+"CMakeFiles/ASearch.dir/OVctSet.cpp.o" \
+"CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o"
 
 # External object files for target ASearch
 ASearch_EXTERNAL_OBJECTS =
@@ -397,13 +522,18 @@ ASearch: CMakeFiles/ASearch.dir/dijkstra.cpp.o
 ASearch: CMakeFiles/ASearch.dir/config.cpp.o
 ASearch: CMakeFiles/ASearch.dir/astar.cpp.o
 ASearch: CMakeFiles/ASearch.dir/main.cpp.o
-ASearch: CMakeFiles/ASearch.dir/jp_search.cpp.o
-ASearch: CMakeFiles/ASearch.dir/theta.cpp.o
 ASearch: CMakeFiles/ASearch.dir/environmentoptions.cpp.o
-ASearch: CMakeFiles/ASearch.dir/OConteiner.cpp.o
+ASearch: CMakeFiles/ASearch.dir/FakeMap.cpp.o
+ASearch: CMakeFiles/ASearch.dir/IOpenContainer.cpp.o
+ASearch: CMakeFiles/ASearch.dir/OList.cpp.o
+ASearch: CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o
+ASearch: CMakeFiles/ASearch.dir/OSet.cpp.o
+ASearch: CMakeFiles/ASearch.dir/OVctList.cpp.o
+ASearch: CMakeFiles/ASearch.dir/OVctSet.cpp.o
+ASearch: CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o
 ASearch: CMakeFiles/ASearch.dir/build.make
 ASearch: CMakeFiles/ASearch.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable ASearch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable ASearch"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ASearch.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -420,10 +550,15 @@ CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/dijkstra.cpp.o.requires
 CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/config.cpp.o.requires
 CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/astar.cpp.o.requires
 CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/main.cpp.o.requires
-CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/jp_search.cpp.o.requires
-CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/theta.cpp.o.requires
 CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/environmentoptions.cpp.o.requires
-CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/OConteiner.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/FakeMap.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/IOpenContainer.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/OList.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/OSet.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/OVctList.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/OVctSet.cpp.o.requires
+CMakeFiles/ASearch.dir/requires: CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o.requires
 
 .PHONY : CMakeFiles/ASearch.dir/requires
 
@@ -432,6 +567,6 @@ CMakeFiles/ASearch.dir/clean:
 .PHONY : CMakeFiles/ASearch.dir/clean
 
 CMakeFiles/ASearch.dir/depend:
-	cd "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch" "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch" "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug" "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug" "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles/ASearch.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/macbook/Documents/OneDrive/AI/PathSearch /Users/macbook/Documents/OneDrive/AI/PathSearch /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles/ASearch.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ASearch.dir/depend
 

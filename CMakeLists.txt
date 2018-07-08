@@ -11,8 +11,6 @@ set(SOURCE_FILES
         config.cpp
         astar.cpp
         main.cpp
-        jp_search.cpp
-        theta.cpp
         environmentoptions.cpp
         tinyxml2.h
         node.h
@@ -26,9 +24,23 @@ set(SOURCE_FILES
         config.h
         astar.h
         searchresult.h
-        jp_search.h
-        theta.h
         environmentoptions.h
-        OConteiner.cpp OConteiner.h FakeMap.cpp FakeMap.h IOpenContainer.cpp IOpenContainer.h OList.cpp OList.h)
+        FakeMap.cpp
+        FakeMap.h
+        IOpenContainer.cpp
+        IOpenContainer.h
+        OList.cpp
+        OList.h
+        OPriorityQueue.cpp
+        OPriorityQueue.h
+        Compare.h
+        OSet.cpp
+        OSet.h
+        OVctList.cpp
+        OVctList.h
+        OVctSet.cpp
+        OVctSet.h
+        OVctProirityQueue.cpp
+        OVctProirityQueue.h)
 add_executable(ASearch ${SOURCE_FILES})
 

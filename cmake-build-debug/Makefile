@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch"
+CMAKE_SOURCE_DIR = /Users/macbook/Documents/OneDrive/AI/PathSearch
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/macbook/Documents/OneDrive/МИЭМ/2 КУРС/AI/PathSearch/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/macbook/Documents/OneDrive/AI/PathSearch/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,221 @@ ASearch/fast:
 	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/build
 .PHONY : ASearch/fast
 
-OConteiner.o: OConteiner.cpp.o
+FakeMap.o: FakeMap.cpp.o
 
-.PHONY : OConteiner.o
+.PHONY : FakeMap.o
 
 # target to build an object file
-OConteiner.cpp.o:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OConteiner.cpp.o
-.PHONY : OConteiner.cpp.o
+FakeMap.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/FakeMap.cpp.o
+.PHONY : FakeMap.cpp.o
 
-OConteiner.i: OConteiner.cpp.i
+FakeMap.i: FakeMap.cpp.i
 
-.PHONY : OConteiner.i
+.PHONY : FakeMap.i
 
 # target to preprocess a source file
-OConteiner.cpp.i:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OConteiner.cpp.i
-.PHONY : OConteiner.cpp.i
+FakeMap.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/FakeMap.cpp.i
+.PHONY : FakeMap.cpp.i
 
-OConteiner.s: OConteiner.cpp.s
+FakeMap.s: FakeMap.cpp.s
 
-.PHONY : OConteiner.s
+.PHONY : FakeMap.s
 
 # target to generate assembly for a file
-OConteiner.cpp.s:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OConteiner.cpp.s
-.PHONY : OConteiner.cpp.s
+FakeMap.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/FakeMap.cpp.s
+.PHONY : FakeMap.cpp.s
+
+IOpenContainer.o: IOpenContainer.cpp.o
+
+.PHONY : IOpenContainer.o
+
+# target to build an object file
+IOpenContainer.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/IOpenContainer.cpp.o
+.PHONY : IOpenContainer.cpp.o
+
+IOpenContainer.i: IOpenContainer.cpp.i
+
+.PHONY : IOpenContainer.i
+
+# target to preprocess a source file
+IOpenContainer.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/IOpenContainer.cpp.i
+.PHONY : IOpenContainer.cpp.i
+
+IOpenContainer.s: IOpenContainer.cpp.s
+
+.PHONY : IOpenContainer.s
+
+# target to generate assembly for a file
+IOpenContainer.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/IOpenContainer.cpp.s
+.PHONY : IOpenContainer.cpp.s
+
+OList.o: OList.cpp.o
+
+.PHONY : OList.o
+
+# target to build an object file
+OList.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OList.cpp.o
+.PHONY : OList.cpp.o
+
+OList.i: OList.cpp.i
+
+.PHONY : OList.i
+
+# target to preprocess a source file
+OList.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OList.cpp.i
+.PHONY : OList.cpp.i
+
+OList.s: OList.cpp.s
+
+.PHONY : OList.s
+
+# target to generate assembly for a file
+OList.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OList.cpp.s
+.PHONY : OList.cpp.s
+
+OPriorityQueue.o: OPriorityQueue.cpp.o
+
+.PHONY : OPriorityQueue.o
+
+# target to build an object file
+OPriorityQueue.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OPriorityQueue.cpp.o
+.PHONY : OPriorityQueue.cpp.o
+
+OPriorityQueue.i: OPriorityQueue.cpp.i
+
+.PHONY : OPriorityQueue.i
+
+# target to preprocess a source file
+OPriorityQueue.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OPriorityQueue.cpp.i
+.PHONY : OPriorityQueue.cpp.i
+
+OPriorityQueue.s: OPriorityQueue.cpp.s
+
+.PHONY : OPriorityQueue.s
+
+# target to generate assembly for a file
+OPriorityQueue.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OPriorityQueue.cpp.s
+.PHONY : OPriorityQueue.cpp.s
+
+OSet.o: OSet.cpp.o
+
+.PHONY : OSet.o
+
+# target to build an object file
+OSet.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OSet.cpp.o
+.PHONY : OSet.cpp.o
+
+OSet.i: OSet.cpp.i
+
+.PHONY : OSet.i
+
+# target to preprocess a source file
+OSet.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OSet.cpp.i
+.PHONY : OSet.cpp.i
+
+OSet.s: OSet.cpp.s
+
+.PHONY : OSet.s
+
+# target to generate assembly for a file
+OSet.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OSet.cpp.s
+.PHONY : OSet.cpp.s
+
+OVctList.o: OVctList.cpp.o
+
+.PHONY : OVctList.o
+
+# target to build an object file
+OVctList.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctList.cpp.o
+.PHONY : OVctList.cpp.o
+
+OVctList.i: OVctList.cpp.i
+
+.PHONY : OVctList.i
+
+# target to preprocess a source file
+OVctList.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctList.cpp.i
+.PHONY : OVctList.cpp.i
+
+OVctList.s: OVctList.cpp.s
+
+.PHONY : OVctList.s
+
+# target to generate assembly for a file
+OVctList.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctList.cpp.s
+.PHONY : OVctList.cpp.s
+
+OVctProirityQueue.o: OVctProirityQueue.cpp.o
+
+.PHONY : OVctProirityQueue.o
+
+# target to build an object file
+OVctProirityQueue.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.o
+.PHONY : OVctProirityQueue.cpp.o
+
+OVctProirityQueue.i: OVctProirityQueue.cpp.i
+
+.PHONY : OVctProirityQueue.i
+
+# target to preprocess a source file
+OVctProirityQueue.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.i
+.PHONY : OVctProirityQueue.cpp.i
+
+OVctProirityQueue.s: OVctProirityQueue.cpp.s
+
+.PHONY : OVctProirityQueue.s
+
+# target to generate assembly for a file
+OVctProirityQueue.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctProirityQueue.cpp.s
+.PHONY : OVctProirityQueue.cpp.s
+
+OVctSet.o: OVctSet.cpp.o
+
+.PHONY : OVctSet.o
+
+# target to build an object file
+OVctSet.cpp.o:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctSet.cpp.o
+.PHONY : OVctSet.cpp.o
+
+OVctSet.i: OVctSet.cpp.i
+
+.PHONY : OVctSet.i
+
+# target to preprocess a source file
+OVctSet.cpp.i:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctSet.cpp.i
+.PHONY : OVctSet.cpp.i
+
+OVctSet.s: OVctSet.cpp.s
+
+.PHONY : OVctSet.s
+
+# target to generate assembly for a file
+OVctSet.cpp.s:
+	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/OVctSet.cpp.s
+.PHONY : OVctSet.cpp.s
 
 astar.o: astar.cpp.o
 
@@ -285,33 +474,6 @@ isearch.cpp.s:
 	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/isearch.cpp.s
 .PHONY : isearch.cpp.s
 
-jp_search.o: jp_search.cpp.o
-
-.PHONY : jp_search.o
-
-# target to build an object file
-jp_search.cpp.o:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/jp_search.cpp.o
-.PHONY : jp_search.cpp.o
-
-jp_search.i: jp_search.cpp.i
-
-.PHONY : jp_search.i
-
-# target to preprocess a source file
-jp_search.cpp.i:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/jp_search.cpp.i
-.PHONY : jp_search.cpp.i
-
-jp_search.s: jp_search.cpp.s
-
-.PHONY : jp_search.s
-
-# target to generate assembly for a file
-jp_search.cpp.s:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/jp_search.cpp.s
-.PHONY : jp_search.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -393,33 +555,6 @@ mission.cpp.s:
 	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/mission.cpp.s
 .PHONY : mission.cpp.s
 
-theta.o: theta.cpp.o
-
-.PHONY : theta.o
-
-# target to build an object file
-theta.cpp.o:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/theta.cpp.o
-.PHONY : theta.cpp.o
-
-theta.i: theta.cpp.i
-
-.PHONY : theta.i
-
-# target to preprocess a source file
-theta.cpp.i:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/theta.cpp.i
-.PHONY : theta.cpp.i
-
-theta.s: theta.cpp.s
-
-.PHONY : theta.s
-
-# target to generate assembly for a file
-theta.cpp.s:
-	$(MAKE) -f CMakeFiles/ASearch.dir/build.make CMakeFiles/ASearch.dir/theta.cpp.s
-.PHONY : theta.cpp.s
-
 tinyxml2.o: tinyxml2.cpp.o
 
 .PHONY : tinyxml2.o
@@ -483,9 +618,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ASearch"
-	@echo "... OConteiner.o"
-	@echo "... OConteiner.i"
-	@echo "... OConteiner.s"
+	@echo "... FakeMap.o"
+	@echo "... FakeMap.i"
+	@echo "... FakeMap.s"
+	@echo "... IOpenContainer.o"
+	@echo "... IOpenContainer.i"
+	@echo "... IOpenContainer.s"
+	@echo "... OList.o"
+	@echo "... OList.i"
+	@echo "... OList.s"
+	@echo "... OPriorityQueue.o"
+	@echo "... OPriorityQueue.i"
+	@echo "... OPriorityQueue.s"
+	@echo "... OSet.o"
+	@echo "... OSet.i"
+	@echo "... OSet.s"
+	@echo "... OVctList.o"
+	@echo "... OVctList.i"
+	@echo "... OVctList.s"
+	@echo "... OVctProirityQueue.o"
+	@echo "... OVctProirityQueue.i"
+	@echo "... OVctProirityQueue.s"
+	@echo "... OVctSet.o"
+	@echo "... OVctSet.i"
+	@echo "... OVctSet.s"
 	@echo "... astar.o"
 	@echo "... astar.i"
 	@echo "... astar.s"
@@ -501,9 +657,6 @@ help:
 	@echo "... isearch.o"
 	@echo "... isearch.i"
 	@echo "... isearch.s"
-	@echo "... jp_search.o"
-	@echo "... jp_search.i"
-	@echo "... jp_search.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -513,9 +666,6 @@ help:
 	@echo "... mission.o"
 	@echo "... mission.i"
 	@echo "... mission.s"
-	@echo "... theta.o"
-	@echo "... theta.i"
-	@echo "... theta.s"
 	@echo "... tinyxml2.o"
 	@echo "... tinyxml2.i"
 	@echo "... tinyxml2.s"

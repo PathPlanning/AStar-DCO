@@ -11,7 +11,6 @@ ISearch::ISearch()
     goal.g = DBL_MAX;
     goal.H = 0;
     goal.F = DBL_MAX;
-    contType = 0;
     dupl = 0;
 }
 
@@ -20,12 +19,51 @@ ISearch::~ISearch(void)
 
 }
 
-
-SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options, const int opentype, const int duplicate)
+void ISearch::CreateOpen(int type, bool allowduplicates, const Map &map)
 {
-    dupl = duplicate;
-    contType = opentype;
-    Open = new OList(this->breakingties);
+    dupl = allowduplicates;
+    switch (type)
+    {
+        case CN_OS_OT_VL:
+        {
+            Open = new OVctList(this->breakingties, this->dupl, map.getMapHeight());
+            break;
+        }
+        case CN_OS_OT_LS:
+        {
+            Open = new OList(this->breakingties, this->dupl);
+            break;
+        }
+        case CN_OS_OT_ST:
+        {
+            Open = new OSet(this->breakingties, this->dupl);
+            break;
+        }
+        case CN_OS_OT_PQ:
+        {
+            Open = new OPriorityQueue(this->breakingties);
+            break;
+        }
+        case CN_OS_OT_VP:
+        {
+            Open = new OVctProirityQueue(this->breakingties, map.getMapHeight());
+            break;
+        }
+        case CN_OS_OT_VS:
+        {
+            Open = new OVctSet(this->breakingties, this->dupl, map.getMapHeight());
+            break;
+        }
+        default:
+        {
+            Open = new OPriorityQueue(this->breakingties);
+        }
+    }
+}
+
+SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const EnvironmentOptions &options)
+{
+
     width = map.getMapWidth();
     goal.i = map.getFinishI();
     goal.j = map.getFinishJ();
@@ -44,7 +82,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     start.H = computeHFromCellToCell(start.i, start.j, goal.i, goal.j, options);
     start.F = start.g + hweight * start.H;
     Open->Add(start);
-    std::cout<<Open->Size()<<"\n";
+
     do
     {
         do
@@ -63,7 +101,7 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
 
         step++;
         succs = findSuccessors(&curr, map, options);
-        int n = succs.size();
+        long int n = succs.size();
         for (int i = 0; i < n; i++)
         {
             succ = succs.front();
