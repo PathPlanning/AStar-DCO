@@ -21,7 +21,11 @@ To build the project you can use CMake, CMakeLists file is available in the repo
 
 ## Input and Output files
 
+<<<<<<< HEAD
 Both files are an XML file with a specific structure.
+=======
+Both files are an XML file with a specific structure. 
+>>>>>>> 512a81b63303f0cbb33db63a0d8834669fa45256
 Input file should contain:
 
 * Mandatory tag `<map>`. It describes the environment.
@@ -48,7 +52,11 @@ Input file should contain:
         - "0" or "none" - log-file is not created.
         - "0.5" or "tiny" - All the input data is copied to the log-file plus short `<summary>` is appended. `<summary>` contains info of the path length, number of steps, elapsed time, etc.
         - "1" or "short" - *0.5*-log plus `<path>` is appended. It looks like `<grid>` but cells forming the path are marked by "\*" instead of "0". The following tags are also appended: `<hplevel>` and `<lplevel>`. `<lplevel>` is the sequence of coordinates of cells forming the path. `<hplevel>` is the sequence of sections forming the path.
+<<<<<<< HEAD
     * `<logpath>` - defines the directory where the log-file should be written. If not specified directory of the input file is used.
+=======
+    * `<logpath>` - defines the directory where the log-file should be written. If not specified directory of the input file is used. 
+>>>>>>> 512a81b63303f0cbb33db63a0d8834669fa45256
     * `<logname>` - defines the name of log-file. If not specified the name of the log file is: "input file name"+"_log"+input file extension.
 
 The main tag in Output file, which containes path length, memory and time:
