@@ -84,22 +84,16 @@ void OVctList::Add(Node elem)
 }
 
 Node OVctList::GetOptimal()
-{
-    double currFMin = DBL_MAX;
-    double currG;
+{ Node currOpt;
+
     for (int i = 0; i < VctLst.size(); i++)
     {
-        if (VctLst[i].size() && currFMin >= VctLst[i].front().F)
+        if (VctLst[i].size() && this->compare(VctLst[i].front(), currOpt))
         {
-            if (currFMin != VctLst[i].front().F || ((breakingties && VctLst[i].front().g > currG) || (!breakingties && VctLst[i].front().g < currG)))
-            {
-                vlminindex = i;
-                currFMin = VctLst[i].front().F;
-                currG = VctLst[i].front().g;
-            }
-
+            vlminindex = i;
+            currOpt.F  = VctLst[i].front().F;
+            currOpt.g = VctLst[i].front().g;
         }
-
     }
 
     Node result = VctLst[vlminindex].front();

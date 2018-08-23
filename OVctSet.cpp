@@ -73,22 +73,18 @@ void OVctSet::Add(Node elem)
 
 Node OVctSet::GetOptimal()
 {
-    double currFMin = DBL_MAX;
-    double currG;
+    Node currOpt;
+
     for (int i = 0; i < VctSt.size(); i++)
     {
-        if (VctSt[i].size() && currFMin >= VctSt[i].begin()->F)
+        if (VctSt[i].size() && this->compare(*VctSt[i].begin(), currOpt))
         {
-            if (currFMin != VctSt[i].begin()->F || ((breakingties && VctSt[i].begin()->g > currG) || (!breakingties && VctSt[i].begin()->g < currG)))
-            {
-                vsminindex = i;
-                currFMin = VctSt[i].begin()->F;
-                currG = VctSt[i].begin()->g;
-            }
-
+            vsminindex = i;
+            currOpt.F  = VctSt[i].begin()->F;
+            currOpt.g = VctSt[i].begin()->g;
         }
-
     }
+
     auto a = VctSt[vsminindex].begin();
     Node result = *a;
     VctSt[vsminindex].erase(a);

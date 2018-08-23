@@ -82,7 +82,6 @@ SearchResult ISearch::startSearch(ILogger *Logger, const Map &map, const Environ
     start.H = computeHFromCellToCell(start.i, start.j, goal.i, goal.j, options);
     start.F = start.g + hweight * start.H;
     Open->Add(start);
-
     do
     {
         do

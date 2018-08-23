@@ -156,6 +156,7 @@
 //Other
     #define CNS_OTHER_PATHSELECTION     "*"
     #define CNS_OTHER_MATRIXSEPARATOR   ' '
+    #define D_EPS 0.00001
 
 #endif
 

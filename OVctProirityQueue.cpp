@@ -55,22 +55,20 @@ void OVctProirityQueue::Add(Node elem)
 
 Node OVctProirityQueue::GetOptimal()
 {
-    double currFMin = DBL_MAX;
-    double currG;
+    Node currOpt;
+
     for (int i = 0; i < VctPq.size(); i++)
     {
-        if (VctPq[i].size() && currFMin >= VctPq[i].top().F)
-        {
-            if (currFMin != VctPq[i].top().F || ((breakingties && VctPq[i].top().g > currG) || (!breakingties && VctPq[i].top().g < currG)))
-            {
-                vpqminindex = i;
-                currFMin = VctPq[i].top().F;
-                currG = VctPq[i].top().g;
-            }
 
+        if (VctPq[i].size() && !this->compare(VctPq[i].top(), currOpt))
+        {
+            vpqminindex = i;
+            currOpt.F  = VctPq[i].top().F;
+            currOpt.g = VctPq[i].top().g;
         }
 
     }
+    
     Node result = VctPq[vpqminindex].top();
     VctPq[vpqminindex].pop();
     size -= 1;
